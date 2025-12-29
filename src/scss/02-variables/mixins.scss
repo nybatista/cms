@@ -1,0 +1,257 @@
+@use "sass:selector";
+@use "sass:math";
+@use "sass:map";
+@use "sass:color";
+@use "sass:string";
+@use "sass:list";
+@use 'globals-tests' as globals;
+
+
+@mixin add-border-shadow(){
+  box-shadow: 0 0 0 1px rgba(67,41,163,.1), 0 1px 8px 0 rgba(67,41,163,.1);
+}
+
+
+@mixin add-main-font(){
+  font-family: "Nunito", sans-serif;
+}
+$fontFamilyMono: globals.$fontFamilyMono;
+
+@mixin add-mono-font(){
+  font-family: $fontFamilyMono;
+}
+
+
+// ============================================
+// ROUTE CREATOR
+
+@mixin add-container-shadow(){
+  box-shadow: 2px 2px 3px rgba(0,0,0,.27);
+}
+
+@mixin add-route-creator-border(){
+ border: 1px solid  RGBA(58, 141, 194, .8);
+}
+
+// ============ END ROUTE CREATOR =============
+
+$breakpoints: (
+        mobile:  320px,
+        tablet:  740px,
+        desktop: 980px,
+        wide:    1300px,
+        xtraLarge: 1920px
+);
+
+
+@mixin light() {
+  @media (prefers-color-scheme: light) {
+    @at-root #{selector.nest(':root:not([data-theme=light]):not([data-theme=dark])', &)} {
+      @content;
+    }
+  }
+  @at-root #{selector.nest(':root[data-theme=light]', &)} {
+    @content;
+  }
+}
+
+@mixin dark() {
+  @media (prefers-color-scheme: dark) {
+    @at-root #{selector.nest(':root:not([data-theme=light]):not([data-theme=dark])', &)} {
+      @content;
+    }
+  }
+  @at-root #{selector.nest(':root[data-theme=dark]', &)} {
+    @content;
+  }
+}
+
+
+
+@mixin lightDark($colorName, $light, $dark){
+
+  @media (prefers-color-scheme: light) {
+    @at-root #{selector.nest(':root:not([data-theme=light]):not([data-theme=dark])')} {
+      #{$colorName}: $light;
+    }
+  }
+  @at-root #{selector.nest(':root[data-theme=light]')} {
+    #{$colorName}: $light;
+  }
+
+  :root {
+    #{$colorName}: #{$dark};
+  }
+
+
+  @media (prefers-color-scheme: dark) {
+    @at-root #{selector.nest(':root:not([data-theme=light]):not([data-theme=dark])')} {
+      #{$colorName}: #{$dark};
+    }
+  }
+  @at-root #{selector.nest(':root[data-theme=dark]')} {
+    #{$colorName}: #{$dark};
+  }
+
+  //@return #{$coloName};
+
+}
+
+
+@mixin  mapPaletteToVars($colorMap){
+
+
+  @each $value, $colors in $colorMap {
+    $colorName: string.slice($value, 2, -1);
+    $colorName: string.to-lower-case($colorName);
+    $colorName: string.insert($colorName, '-',3);
+    $colorName: "--"+$colorName;
+
+    :root {
+      //  #{$colorName}: #{list.nth($colors, 2)};
+    }
+
+    @at-root #spyne-plugin-json-cms.dark{
+      #{$colorName}: #{list.nth($colors, 2)};
+    }
+
+    @at-root #spyne-plugin-json-cms.light{
+      #{$colorName}: #{list.nth($colors, 1)};
+    }
+
+  @include lightDark($colorName, list.nth($colors, 1), list.nth($colors, 2));
+
+
+  }
+
+
+
+}
+
+@function lDFn($colorName, $light, $dark){
+
+
+
+}
+
+
+
+@mixin screenQuery($queryType, $size){
+  // until = max
+  // from = min
+
+  $pixelSize: map.get($breakpoints, $size);
+  @if ($pixelSize == null){
+    @warn "screenQuery size needs to be a $breakpoints value ('mobile,'tablet','desktop','wide','xtraLarge') ";
+  }
+
+  @if $queryType == "min" {
+    @media (min-width: $pixelSize){@content;}
+  } @else if $queryType == "max"{
+    @media (max-width: $pixelSize){@content;}
+  } @else {
+    @warn "SASS WARNING: screenQuery, queryType, '#{$queryType}' needs to be either 'min' or 'max'";
+  }
+
+  //@error 'media query values are incorrect';
+
+}
+
+
+// ===========================
+// Tailwind-style button mixin
+// ===========================
+// Usage:
+// @include tw-button(#3b82f6);                    // Default blue button
+// @include tw-button(#10b981, #047857);          // Custom hover color
+// @include tw-button(#ef4444, null, 120px, 40px); // Custom size
+
+@mixin tw-button(
+  $color,
+  $hover-color: null,
+  $min-width: 100px,
+  $min-height: 40px,
+  $padding-y: 0.5rem,
+  $padding-x: 1.25rem,
+  $border-radius: 0.5rem // ~rounded-lg
+) {
+  $hover-color: if(
+                  $hover-color == null,
+                  color.adjust($color, $lightness: -8%),
+                  $hover-color
+  );
+
+  @apply inline-flex items-center justify-center font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+
+  background-color: $color;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  min-width: $min-width;
+  min-height: $min-height;
+  height: max-content;
+  padding: $padding-y $padding-x;
+  border-radius: $border-radius;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &:focus-visible {
+    @apply ring ring-offset-2;
+    ring-color: $color;
+  }
+
+  &:disabled {
+    @apply opacity-60 cursor-not-allowed;
+  }
+}
+
+// Example buttons
+.btn-primary {
+  @include tw-button(#3b82f6); // Tailwind blue-500
+}
+
+.btn-success {
+  @include tw-button(#10b981); // Tailwind emerald-500
+}
+
+.btn-danger {
+  @include tw-button(#ef4444); // Tailwind red-500
+}
+// Example buttons
+.btn-primary {
+  @include tw-button(#3b82f6); // Tailwind blue-500
+}
+
+.btn-success {
+  @include tw-button(#10b981); // Tailwind emerald-500
+}
+
+.btn-danger {
+  @include tw-button(#ef4444); // Tailwind red-500
+}
+// Example buttons
+.btn-primary {
+  @include tw-button(#3b82f6); // Tailwind blue-500
+}
+
+.btn-success {
+  @include tw-button(#10b981); // Tailwind emerald-500
+}
+
+.btn-danger {
+  @include tw-button(#ef4444); // Tailwind red-500
+}
+
+// Example usage
+.btn-primary {
+  @include tw-button(#3b82f6);
+}
+.btn-success {
+  @include tw-button(#10b981);
+}
+.btn-danger {
+  @include tw-button(#ef4444);
+}

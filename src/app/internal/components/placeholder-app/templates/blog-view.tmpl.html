@@ -1,0 +1,40 @@
+<div class="detail-content">
+    <figure class="detail-image"
+            data-channel="ROUTE"
+            data-event-prevent-default="true"
+            data-card-id="{{keyword}}"
+            data-nav-level="2">
+        <img src="{{bgImg}}" data-img-photographer="{{image.photographer_url}}" data-img-info="{{image.info}}"
+             alt="{{image.alt}}">
+
+
+        <figcaption class="detail-text"
+                    data-channel="ROUTE"
+                    data-event-prevent-default="true"
+                    data-card-id="{{keyword}}"
+                    data-nav-level="2">
+            <h3>{{headline}}</h3>
+        </figcaption>
+
+    </figure>
+</div>
+
+
+<div class="expanded-content-holder">
+    <dl>
+        <dt>test cms</dt>
+        <dd>{{article.7.myTestVal}}</dd>
+    </dl>
+
+    {{#article}}
+    <p>{{.}}</p>
+    {{/article}}
+</div>
+
+<a class="expand-card" href="{{linkDataset.href}}"
+   data-channel="ROUTE"
+   data-event-prevent-default="true"
+   data-card-id="{{keyword}}"
+   data-nav-level="2"><span class="visually-hidden1">Read More</span></a>
+
+

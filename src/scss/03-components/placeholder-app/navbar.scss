@@ -1,0 +1,41 @@
+@use "../../02-variables/palette";
+
+#navbar {
+
+  position: relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width: 100%;
+  height: 52px;
+  max-width: 1280px;
+  background: palette.$Primary-900;
+  color: palette.$Neutral-200;
+
+  nav{
+
+    position: relative;
+    margin: 0 1rem;
+
+    a{
+
+      position:relative;
+      margin: 0 .2rem;
+      color: palette.$Primary-400;
+      text-decoration: none;
+      &.selected{
+        color: palette.$Neutral-200;
+        pointer-events: none;
+
+      }
+
+      &:hover{
+
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+
+}

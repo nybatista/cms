@@ -1,0 +1,41 @@
+
+<dl data-cms-type="{{dataType}}">
+<dt class="cms-key">
+    <hr class="drag-hilight drag-hilight-container container-top" data-move-element-id="{{vsid}}" data-move-element-type="self" data-append-type="appendView"  data-cms-type="object"  data-cms-id="{{dataCmsId}}"   />
+
+    <div class="controls-container cms-data-panel-property-controls container-cms">
+        <div class="controls-holder">
+            <div class="ctrls controls-left container-cms">
+                <button class="cms-data-panel-btn dragger container-cms"  data-is-u-i-element="true"  data-property-id="{{vsid}}" >
+                    <span class="material-icons">drag_indicator</span>
+                </button>
+                <button class="toggle expand-override collapse" data-is-u-i-element="true" data-type="nestExpandOverride"   data-active-element-id="{{vsid}}"  data-property-id="{{vsid}}">
+                    <span class="material-icons">arrow_right</span>
+                </button>
+            </div>
+            <div class="ctrls controls-right">
+                <button class="cms-data-panel-btn expand container-cms" data-type="expand"  data-property-id="{{vsid}}">
+                    <span class="material-icons">more_horiz</span>
+                </button>
+
+            </div>
+        </div>
+        <hr class="drag-hilight drag-hilight-container"   data-move-element-id="{{vsid}}" data-move-element-type="parent" data-append-type="appendViewAfter"  data-cms-type="object"  data-cms-id="{{dataCmsId}}"   />
+
+    </div>
+
+
+
+    <input id="input-{{id}}" type="text"
+            class="cms-panel-input type-key container-cms"
+            data-cms-id="{{dataCmsId}}" data-is-key=true data-cms-key="{{cmsKey}}"
+
+           value="{{cmsKey}}" />
+
+</dt>
+    <div class="spyne-cms-property-container" data-type="{{dataType}}">
+
+
+    </div>
+
+</dl>

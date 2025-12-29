@@ -1,0 +1,149 @@
+@charset "UTF-8";
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top .drag-handle.side.bottom {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.right .drag-handle.side.left {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom .drag-handle.side.top {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.left .drag-handle.side.right {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.right .corner-pin.top.right {
+  pointer-events: none;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.right .corner-pin.top.right svg rect {
+  opacity: 0.2;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.right .corner-pin.top.right svg circle#selected {
+  opacity: 0.5;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.right .drag-handle.corner.bottom-left {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.left .corner-pin.top.left {
+  pointer-events: none;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.left .corner-pin.top.left svg rect {
+  opacity: 0.2;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.left .corner-pin.top.left svg circle#selected {
+  opacity: 0.5;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.left .drag-handle.corner.bottom-right {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.right .corner-pin.bottom.right {
+  pointer-events: none;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.right .corner-pin.bottom.right svg rect {
+  opacity: 0.2;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.right .corner-pin.bottom.right svg circle#selected {
+  opacity: 0.5;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.right .drag-handle.corner.top-left {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.left div.corner-pin.bottom.left {
+  pointer-events: none;
+  opacity: 1;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.left div.corner-pin.bottom.left svg rect {
+  opacity: 0.2;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.left div.corner-pin.bottom.left svg circle#selected {
+  opacity: 0.5;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.left .drag-handle.corner.top-right {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000000000;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle {
+  position: absolute;
+  background: green;
+  opacity: 0;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle:active::after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: blue;
+  content: " ";
+  z-index: 1;
+  opacity: 0;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner {
+  width: 1rem;
+  height: 1rem;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.top-left, #spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.top-right {
+  top: -2px;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.top-left {
+  left: -0.25rem;
+  cursor: se-resize;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.top-right {
+  right: -0.25rem;
+  cursor: sw-resize;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.bottom-right, #spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.bottom-left {
+  bottom: -0.25rem;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.bottom-right {
+  right: -0.25rem;
+  cursor: nw-resize;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.bottom-left {
+  left: -0.25rem;
+  cursor: ne-resize;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side {
+  background: skyblue;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.top, #spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.bottom {
+  width: calc(100% - 2rem);
+  height: 1rem;
+  left: 1rem;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.left, #spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.right {
+  top: 1rem;
+  width: 1rem;
+  height: calc(100% - 2rem);
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.left:active, #spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.right:active {
+  z-index: 1000000000;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.left {
+  left: -0.75rem;
+  cursor: e-resize;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.right {
+  right: calc(-1rem + 2px);
+  cursor: w-resize;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.top {
+  top: -0.75rem;
+  cursor: s-resize;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.bottom {
+  bottom: -0.75rem;
+  cursor: n-resize;
+}
+
+/*# sourceMappingURL=cms-ui-drag-handles.css.map */

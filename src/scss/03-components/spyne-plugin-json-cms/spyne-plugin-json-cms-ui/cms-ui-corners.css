@@ -1,0 +1,41 @@
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder .corner-pin {
+  pointer-events: all;
+  opacity: 0.3;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder .corner-pin svg #selected {
+  opacity: 0;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-corners-container div.corner-pin {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-corners-container div.corner-pin:hover {
+  opacity: 1;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-corners-container div.corner-pin:hover svg circle#selected {
+  opacity: 1;
+  transition: all 0.25s ease;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-corners-container div.corner-pin.top.left {
+  left: 6px;
+  top: 6px;
+  transform: rotateX(180deg);
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-corners-container div.corner-pin.top.right {
+  right: 6px;
+  top: 6px;
+  transform: rotate(180deg);
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-corners-container div.corner-pin.bottom.left {
+  bottom: 6px;
+  left: 6px;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-corners-container div.corner-pin.bottom.right {
+  bottom: 6px;
+  right: 6px;
+  transform: rotateY(-180deg);
+}
+
+/*# sourceMappingURL=cms-ui-corners.css.map */

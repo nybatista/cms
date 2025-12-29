@@ -1,0 +1,116 @@
+.app-page.blog-mode {
+
+  ul.app-page-subnav-container {
+
+    display: flex;
+    flex-direction: column;
+    max-width: 1080px;
+    list-style-type: none;
+
+    li.blog-item {
+      position: relative;
+      margin-top: 1rem;
+      padding: 4rem 0 2rem 0;
+      background: #fff;
+
+      &.expanded {
+        a.expand-card {
+          opacity: 0;
+          height: 0;
+          pointer-events: none;
+          display: none;
+        }
+
+        div.expanded-content-holder {
+          opacity: 1;
+          height: auto;
+          pointer-events: auto;
+          padding: 0 0 4rem 0;
+          transition: height .25s ease;
+        }
+      }
+
+      &:first-child {
+        margin-top: 2rem;
+      }
+
+      .detail-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+
+        figure.detail-image {
+          position: relative;
+          max-width: 80%;
+
+          img {
+            position: relative;
+            width: 100%;
+          }
+        }
+
+
+        figcaption.detail-text {
+          margin: 0;
+          p, h3 {
+            margin: 0;
+          }
+
+          p {
+            color: $Neutral-400;
+          }
+
+          h3 {
+            font-weight: 400;
+            color: $Neutral-900;
+            text-transform: uppercase;
+            line-height: 120%;
+            margin: .5rem 0;
+          }
+
+        }
+
+      }
+
+
+      a.expand-card {
+        position: relative;
+        left: 10%;
+        text-decoration: none;
+        color: $Primary-400;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      div.expanded-content-holder {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        height: 0;
+        pointer-events: none;
+        opacity: 0;
+        overflow: hidden;;
+
+        p {
+          position: relative;
+          max-width: 80%;
+          color: $Neutral-400;
+          margin: .5rem 0;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

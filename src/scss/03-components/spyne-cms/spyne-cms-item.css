@@ -1,0 +1,70 @@
+spyne-cms-item {
+  position: relative;
+  display: inline-block;
+  /*
+  svg{
+    position: absolute;;
+
+    width: calc(100% + 0px);
+    height: calc(100% + 0px);
+
+    pointer-events: auto;
+    cursor: pointer;
+    display: inline-block;;
+    background: rgba(123,123,222,.1);
+    //border:1px solid green;
+
+    rect {
+      stroke-width: 2px;
+      stroke: green;
+      fill:none;;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+  */
+}
+spyne-cms-item spyne-cms-item-hitbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: contents;
+  pointer-events: none;
+}
+spyne-cms-item spyne-cms-item-hitbox svg {
+  position: absolute;
+  width: calc(100% + 0px);
+  height: calc(100% + 0px);
+  pointer-events: none;
+  display: inline-block;
+  visibility: hidden;
+}
+spyne-cms-item spyne-cms-item-hitbox svg rect {
+  fill: none;
+  pointer-events: visiblePainted;
+  cursor: pointer;
+  visibility: visible;
+  opacity: 0;
+}
+spyne-cms-item spyne-cms-item-hitbox svg rect.stroked {
+  stroke-width: 12px;
+  stroke: skyblue;
+  width: 100%;
+  height: 100%;
+}
+spyne-cms-item spyne-cms-item-hitbox svg rect.stroked:hover {
+  stroke: royalblue;
+}
+spyne-cms-item spyne-cms-item-hitbox svg rect.box {
+  width: 30px;
+  height: 30px;
+  max-width: 80%;
+  max-height: 80%;
+  fill: skyblue;
+}
+spyne-cms-item spyne-cms-item-hitbox svg rect.box:hover {
+  fill: royalblue;
+}
+
+/*# sourceMappingURL=spyne-cms-item.css.map */

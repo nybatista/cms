@@ -1,0 +1,31 @@
+#app-main{
+  position: relative;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  background: $Neutral-050;
+
+  &::before{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: $app-header-height;
+    background: $Primary-800;
+    content: '\00a0';
+  }
+
+
+  #stage-view #stage-content{
+    position: relative;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: $Neutral-400;
+    z-index: $z-index-app-pages;
+
+
+  }
+
+}

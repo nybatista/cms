@@ -1,0 +1,81 @@
+@use "../../../02-variables/palette-mixins";
+
+#spyne-plugin-json-cms {
+
+  #cms-ui {
+    #cms-max-min-close {
+      position: relative;
+      //top: 4px;
+     // right: 10px;
+
+      ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+
+        li.ui-option {
+          position: relative;
+          width: 1.5rem;
+          height: 1.5rem;
+          margin: 0 .5rem;
+
+
+         // opacity: .5;
+          pointer-events: all;
+          cursor: pointer;
+
+          svg {
+            circle {
+              fill: rgba(0, 0, 0, 0);
+            }
+
+            rect {
+             // opacity: .5;
+              fill: palette-mixins.$ldPrimary-975;
+            }
+
+          }
+
+          &:hover {
+            opacity: 1;
+
+            svg {
+              circle {
+              }
+
+              rect {
+                opacity: .9;
+              }
+
+            }
+
+          }
+
+
+          &.max {
+          }
+
+          &.min-max {
+
+            #contract {
+            }
+          }
+
+          &.expand{
+            path{
+              fill: palette-mixins.$ldPrimary-975;
+            }
+          }
+
+          &.close {
+          }
+
+        }
+      }
+    }
+
+  }
+
+}

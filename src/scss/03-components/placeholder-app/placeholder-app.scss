@@ -1,0 +1,41 @@
+//@import "../../01-vendors/normalize.css";
+//@import "../../02-variables/globals.scss";
+//@import "../../02-variables/mixins.scss";
+
+//@import "../../02-variables/palette.scss";
+@use "navbar.scss";
+@use "pages.scss";
+@use "page-content.scss";
+@use "blog-items.scss";
+@use "app-ui.scss";
+@use "../../02-variables/palette";
+
+//@import "placeholder-app-tailwind.css";
+
+* {
+  box-sizing: border-box;
+}
+body{
+
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  align-items: center;
+
+}
+
+
+#stage-view{
+
+  position:relative;
+  width: 100%;
+  max-width: 1280px;
+  display:flex;
+  flex-direction: column;;
+  background: palette.$Neutral-050;
+  flex-grow: 1;
+
+
+}

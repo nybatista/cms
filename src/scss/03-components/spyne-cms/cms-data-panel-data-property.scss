@@ -1,0 +1,176 @@
+@use "../../02-variables/globals";
+@use "../../02-variables/palette-mixins";
+
+#spyne-plugin-json-cms-content-holder {
+
+  .controls-container.cms-data-panel-property-controls {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+
+    .controls-holder {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+
+      .ctrls {
+        position: relative;
+        padding: 0px .25rem;
+        display: flex;
+        align-content: space-between;;
+        pointer-events: all;
+        // z-index: $z-index-app-ui;
+
+        button {
+          color: palette-mixins.$ldNeutral-800;
+          pointer-events: all;
+
+          span {
+            font-size: 1.125rem;
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+
+        }
+
+
+        &.controls-left {
+
+
+          span.material-icons {
+            pointer-events: none;
+            //background: orange;
+          }
+
+          button.dragger {
+            POSITION: RELATIVE;
+
+            left: -3px;
+            opacity: .3;
+            top: 10px;
+
+            &.container-cms {
+              top: 4px;
+            }
+
+
+            span {
+
+            }
+
+          }
+
+          button.toggle {
+            width: 20px;
+            padding: 0;
+            margin: 0;
+            left: -6px;
+            position: relative;
+            top: 7px;
+
+            span {
+              font-size: 1.75rem;
+              transform: rotate(90deg);
+
+
+            }
+          }
+
+        }
+
+        &.controls-right {
+          z-index: auto;
+          flex-direction: column;
+
+          button {
+            opacity: .325;
+            //z-index: auto;
+            z-index: 2;
+
+            &:hover {
+              opacity: 1;
+            }
+
+          }
+
+
+          .control-options-panel {
+            position: absolute;
+            top: 3px;
+            right: 2px;
+            width: 200px;
+            background: #3e4c59;
+            border-radius: 4px;
+            box-shadow: 1px -4px 6px 220x #222;
+            border: 1px solid #333;
+            opacity: 1;
+            pointer-events: all;
+            visibility: visible;
+            padding: 0.5rem 0 1rem 1rem;
+            //opacity: 0;
+            //visibility: hidden;
+            //pointer-events: none;
+            z-index: globals.$z-index-app-pages;
+
+            ul.options {
+
+              button {
+                opacity: .8;
+                font-size: 1rem;
+                display: flex;
+
+                span {
+                  margin-right: 10px;
+                }
+
+
+                &:hover {
+                  opacity: 1;
+                }
+
+                &.disabled {
+                  opacity: .4;
+                  pointer-events: none;
+                }
+              }
+
+            }
+
+
+          }
+
+
+          // z-index: $z-index-app-pages;
+
+          &.expand {
+
+            // z-index: $z-index-app-ui;
+            button.expand-btn1 {
+              opacity: 0;
+              visibility: hidden;;
+              pointer-events: none;
+            }
+
+
+          }
+
+        }
+      }
+    }
+
+
+  }
+
+
+
+
+
+}

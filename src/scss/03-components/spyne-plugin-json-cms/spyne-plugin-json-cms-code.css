@@ -1,0 +1,30 @@
+#cms-code-display {
+  position: relative;
+  padding: 5px 0;
+  height: 50%;
+  flex-grow: 1;
+  pointer-events: all;
+}
+#cms-code-display pre {
+  position: relative;
+  height: calc(100% - 50px);
+  font-size: 0.85rem;
+  overflow: auto;
+}
+#cms-code-display pre code {
+  position: relative;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+#cms-code-display pre code span.truncator-expand {
+  opacity: 0.85;
+}
+#cms-code-display pre code span.truncator-expand span.hljs-string {
+  color: greenyellow;
+  cursor: pointer;
+}
+#cms-code-display pre code span.truncator-expand:hover {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=spyne-plugin-json-cms-code.css.map */

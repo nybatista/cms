@@ -1,0 +1,69 @@
+.app-page-subnav-container {
+
+  li.page-card {
+
+    .card-container {
+      &.expanded {
+        section.card-material div.expanded-content-holder {
+          transition: opacity 1s ease;
+          background: #fff;
+
+          &.reveal {
+            min-height: calc(69vh - 56px);
+          }
+        }
+
+      }
+
+
+      .card-material {
+        div.expanded-content-holder {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: all 1s ease;
+          padding: 0;
+
+          article.expanded-content {
+            max-width: 960px;
+            position: relative;
+            padding: 1rem 4rem 2rem 4rem;
+            flex-grow: 1;
+            opacity: 0;
+            transition: opacity .5s ease;
+
+            &.reveal {
+              opacity: 1;
+            }
+
+            h2, p.tagline {
+              text-align: left;
+              color: $Neutral-600;
+              font-size: 1.3rem;
+            }
+
+            h2 {
+              color: $Primary-800;
+            }
+
+            p {
+              margin-bottom: .75rem;
+              line-height: 140%;
+              color: $Neutral-600;
+            }
+
+            &.fade-out {
+              position: absolute;;
+              opacity: 0;
+              transition: opacity .125s ease;
+            }
+
+          }
+        }
+
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,407 @@
+{
+  "propFirstStr": "myPrimitiveStr",
+  "propSecondObj": {
+    "objFirstObj": {
+      "pageId": "home",
+      "background": "//assetscontainer.com/spa-gen-site/static/imgs/pexels/pexels-photo-2775840.jpeg",
+      "bgImg": "./static/imgs/pexels-photo-2775840.jpeg",
+      "image": {
+        "id": 2775840,
+        "width": 3456,
+        "height": 5184,
+        "url": "https://www.pexels.com/photo/grass-with-drops-of-water-2775840/",
+        "photographer": "Marta Dzedyshko",
+        "photographer_url": "https://www.pexels.com/@marta-dzedyshko-1042863",
+        "alt": "Grass with Drops of Water",
+        "photographer_id": 1042863,
+        "likedBool": false,
+        "type": "abstract",
+        "types": [
+          "abstract"
+        ],
+        "info": "https://www.pexels.com/photo/grass-with-drops-of-water-2775840/",
+        "link": "https://images.pexels.com/photos/2775840/pexels-photo-2775840.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+        "fileName": "pexels-photo-2775840.jpeg",
+        "background": "//assetscontainer.com/spa-gen-site/static/imgs/pexels/pexels-photo-2775840.jpeg"
+      },
+      "objSecondObj": {
+        "pageId": "quick-start",
+        "background": "//assetscontainer.com/spa-gen-site/static/imgs/pexels/pexels-photo-432016.jpeg",
+        "bgImg": "./static/imgs/pexels-photo-432016.jpeg",
+        "image": {
+          "id": 432016,
+          "width": 4896,
+          "height": 3264,
+          "url": "https://www.pexels.com/photo/dark-image-jellyfishes-motion-432016/",
+          "photographer": "Francesco Ungaro",
+          "photographer_url": "https://www.pexels.com/@francesco-ungaro",
+          "alt": "Red Bubbles Wallpaper",
+          "photographer_id": 21273,
+          "likedBool": false,
+          "type": "abstract",
+          "types": [
+            "abstract"
+          ],
+          "info": "https://www.pexels.com/photo/dark-image-jellyfishes-motion-432016/",
+          "link": "https://images.pexels.com/photos/432016/pexels-photo-432016.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200",
+          "fileName": "pexels-photo-432016.jpeg",
+          "background": "//assetscontainer.com/spa-gen-site/static/imgs/pexels/pexels-photo-432016.jpeg"
+        },
+        "objThirdArr": [
+          "Nominavi tincidunt forensibus ei vel. Ignota molestie ea cum, ne mel ludus postulant assentior. Id autem sensibus disputando pro, quidam scripta corpora has eu, autem atqui inermis vis ex. Cu assum accusam offendit eos, has ea labore pericula conclusionemque, eos nullam euismod id. Semper intellegam scriptorem ut nec, cibo solum fabellas te eos, ne nec minim dicit option.",
+          "Atqui utroque ex nam. Dolorem copiosae ut est, mei eu soluta everti reprimique. Tantas admodum mediocrem mel eu, soluta fabulas delenit ut duo, quod omittam scribentur qui an. Ex errem denique legendos nam, vocent maiorum menandri cum at.",
+          "An pro nibh salutatus, ea rebum aeterno complectitur has. Quo ea elitr iriure liberavisse, eos ad expetenda repudiandae. Vel porro patrioque referrentur ex, ex movet apeirian omittantur pro, inani mediocritatem vim at. Liber laoreet voluptatum ei sed, cetero mediocrem suscipiantur eum an. Id euismod salutatus qui, vel deserunt adversarium cu. Graeci tamquam malorum vim et, mei an oratio libris.",
+          "Sit tale facilisi consectetuer ne. Mei cu officiis perpetua, ea mel sonet doctus forensibus. At has rebum ridens timeam, no vel quem novum. Ad cum elit fuisset reprehendunt. Eirmod detracto vim eu, minimum deserunt cum et.",
+          "Mei te autem justo partiendo. Usu an quas probo, eum te dicunt salutatus adversarium, in vivendo phaedrum mea. Autem voluptua gubergren no quo. Ea has eleifend voluptaria comprehensam, est cu nostrud suavitate, legimus eligendi eu eam. Diam partem ea quo, usu clita consetetur ex."
+        ]
+      }
+    }
+  },
+  "propThirdArr": [
+    {
+      "id": "bway",
+      "label": "1585 Broadway",
+      "startTime": 0,
+      "endTime": 5.582793
+    },
+    {
+      "id": "nyc",
+      "label": "NYC Buildings",
+      "startTime": 7.970343,
+      "endTime": 11.371206
+    },
+    {
+      "id": "nyplaza",
+      "label": "One NY Plaza",
+      "startTime": 13.325493,
+      "endTime": 16.807606
+    },
+    {
+      "id": "westchester",
+      "label": "Westchester",
+      "startTime": 19.934293,
+      "endTime": 25.515942
+    }
+  ],
+  "propFourthNestedObj": {
+    "NewKey 2": {
+      "NewKey": {}
+    },
+    "NewKey": {},
+    "metadata": {
+      "version": "1"
+    },
+    "content": [
+      {
+        "elementItems": "container",
+        "backgroundStyle": "focal",
+        "margins": {
+          "value": "none"
+        },
+        "content": [
+          {
+            "elementItems": "container",
+            "backgroundStyle": "focal",
+            "cornerStyle": "rounded",
+            "margins": {
+              "value": "minimal"
+            },
+            "content": [
+              {
+                "elementItems": "hero",
+                "height": "short",
+                "backgroundImage": {
+                  "overlayType": "solid",
+                  "overlayColor": "gray"
+                },
+                "content": [
+                  {
+                    "elementItems": "heroImage",
+                    "image": {
+                      "elementItems": "subimage",
+                      "scaleToFull": true
+                    }
+                  },
+                  {
+                    "elementItems": "heroHeading",
+                    "heading": "Short hero height",
+                    "textColor": "#ccc",
+                    "fontSize": "11px",
+                    "textAlignment": "left",
+                    "marginTop": "1.75rem"
+                  },
+                  {
+                    "elementItems": "heroSubheading",
+                    "subheading": "Subheading",
+                    "textColor": "#000",
+                    "textAlignment": "left"
+                  },
+                  {
+                    "elementItems": "heroBody",
+                    "body": "Lorem Ipsum dolor",
+                    "textColor": "blue",
+                    "textAlignment": "left"
+                  }
+                ]
+              },
+              {
+                "elementItems": "html",
+                "focal": false,
+                "html": "<h5 style='color:#979797; font-size:11px; letter-spacing:1px; margin-bottom:5px;'>WELCOME TO MYPLACES</h5><h1 style='margin:0 7rem -3rem 0; font-size:2rem'>Hello,<br/><b style='font-weight:800;'>Lorem</b></h1>",
+                "inset": true
+              },
+              {
+                "elementItems": "container",
+                "margins": {
+                  "value": "minimal"
+                },
+                "content": [
+                  {
+                    "elementItems": "buttonContainer",
+                    "horizontalAlignment": "right",
+                    "buttons": [
+                      {
+                        "elementItems": "linkButton",
+                        "title": "Book a Room",
+                        "link": {
+                          "backActionTarget": "parent"
+                        },
+                        "actionType": "emphasized"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elementItems": "container",
+                "backgroundStyle": "subfocal",
+                "cornerStyle": "rounded",
+                "borderStyle": "solid",
+                "margins": {
+                  "value": "minimal"
+                },
+                "content": [
+                  {
+                    "elementItems": "html",
+                    "focal": false,
+                    "html": "<div style='font-size:0.8125rem;font-weight:bold;margin-bottom:0.25rem'>9:30 am - 10:15 am</div>\n                                                <div style='font-size:1.25rem;line-height:1.4em'>Q2 Planning Meeting</div>War Room<br>Cambridge, Floor 2"
+                  },
+                  {
+                    "elementItems": "container",
+                    "id": "extend_down",
+                    "margins": {
+                      "value": "minimal"
+                    },
+                    "content": [
+                      {
+                        "elementItems": "buttonContainer",
+                        "buttons": [
+                          {
+                            "elementItems": "linkButton",
+                            "title": "Extend",
+                            "accessoryIcon": "dropdown",
+                            "accessoryIconPosition": "right",
+                            "events": [
+                              {
+                                "eventName": "click",
+                                "action": "show",
+                                "targetId": "extend_container"
+                              },
+                              {
+                                "eventName": "click",
+                                "action": "show",
+                                "targetId": "extend_up"
+                              },
+                              {
+                                "eventName": "click",
+                                "action": "hide",
+                                "targetId": "extend_down"
+                              }
+                            ]
+                          },
+                          {
+                            "elementItems": "linkButton",
+                            "title": "Release",
+                            "link": {
+                            },
+                            "confirmationMsg": "Are you sure you want to release this room action? The event will not be removed from your calendar, but the room will be removed from the event."
+                          },
+                          {
+                            "elementItems": "linkButton",
+                            "title": "Details",
+                            "link": {
+                              "relativePath": ""
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elementItems": "container",
+                    "id": "extend_up",
+                    "margins": {
+                      "value": "minimal"
+                    },
+                    "hidden": true,
+                    "content": [
+                      {
+                        "elementItems": "buttonContainer",
+                        "buttons": [
+                          {
+                            "elementItems": "linkButton",
+                            "title": "Extend",
+                            "accessoryIcon": "dropup",
+                            "accessoryIconPosition": "right",
+                            "events": [
+                              {
+                                "eventName": "click",
+                                "action": "hide",
+                                "targetId": "extend_container"
+                              },
+                              {
+                                "eventName": "click",
+                                "action": "hide",
+                                "targetId": "extend_up"
+                              },
+                              {
+                                "eventName": "click",
+                                "action": "show",
+                                "targetId": "extend_down"
+                              }
+                            ]
+                          },
+                          {
+                            "elementItems": "linkButton",
+                            "title": "Release",
+                            "link": {
+                              "relativePath": "myurl.com"
+                            },
+                            "confirmationMsg": "Are you sure you want to release this room action? The event will not be removed from your calendar, but the room will be removed from the event."
+                          },
+                          {
+                            "elementItems": "linkButton",
+                            "title": "Details",
+                            "link": {
+                              "relativePath": "./asdfawe/asdfwe/mylink.html"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "elementItems": "container",
+                    "id": "extend_container",
+                    "hidden": true,
+                    "content2": [
+                      {
+                        "elementItems": "form",
+                        "requestMethod": "GET",
+                        "items": [
+                          {
+                            "elementItems": "input",
+                            "inputType": "radioSegmented",
+                            "name": "extendDuration",
+                            "label": "Extend this meeting by",
+                            "optionLabels": [
+                              "15 min",
+                              "30 min",
+                              "45 min",
+                              "1 hr"
+                            ],
+                            "optionValues": [
+                              "15",
+                              "30",
+                              "45",
+                              "60"
+                            ],
+                            "value": "30"
+                          },
+                          {
+                            "elementItems": "input",
+                            "inputType": "hidden",
+                            "name": "extendId",
+                            "value": "0"
+                          },
+                          {
+                            "elementItems": "buttonContainer",
+                            "buttons": [
+                              {
+                                "elementItems": "formButton",
+                                "buttonType": "submit",
+                                "actionType": "constructive",
+                                "title": "Confirm",
+                                "confirmationMsg": "Are you sure you want to extend this action?"
+                              },
+                              {
+                                "elementItems": "linkButton",
+                                "title": "Cancel",
+                                "events": [
+                                  {
+                                    "eventName": "click",
+                                    "action": "hide",
+                                    "targetId": "extend_up"
+                                  },
+                                  {
+                                    "eventName": "click",
+                                    "action": "show",
+                                    "targetId": "extend_down"
+                                  },
+                                  {
+                                    "eventName": "click",
+                                    "action": "hide",
+                                    "targetId": "extend_container"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "elementItems": "html",
+                "focal": false,
+                "html": "<div style='height:0.5rem'></div>"
+              },
+              {
+                "elementItems": "list",
+                "showTopBorder": true,
+                "items": [
+                  {
+                    "title": "Usability Tests",
+                    "label": "11:00 am - 11:30 am",
+                    "description": "NYU<br>Cambridge, Floor 1",
+                    "link": {
+                      "relativePath": "./actionDetail.js?id=1"
+                    }
+                  },
+                  {
+                    "title": "Calling with XYZ",
+                    "label": "1:00 pm - 1:30 pm",
+                    "description": "Notre Dame<br>London, Floor 1",
+                    "link": {
+                      "relativePath": "./actionDetail.js?id=2"
+                    }
+                  },
+                  {
+                    "title": "Teams Huddle",
+                    "label": "3:00 pm - 4:00 pm",
+                    "description": "Stonehenge<br>London, Floor 2",
+                    "link": {
+                      "relativePath": "./actionDetail.js?id=3"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

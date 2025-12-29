@@ -1,0 +1,62 @@
+.app-page{
+  #page-404{
+    position: absolute;
+
+  }
+}
+
+#page-404{
+
+  background: $Neutral-050;
+  position: relative;
+
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;// calc(100% - 52px);
+  min-height: calc(100vh - 124px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;;
+  justify-content: flex-start;
+
+  .page-404-content{
+    position: relative;
+    margin-top: 16vh;
+    z-index: 111111;
+    min-width: 400px;
+    display: flex;;
+    align-items: center;
+    //background: orange;
+    align-content: center;
+    justify-content: center;
+
+  }
+
+  svg{
+    position: relative;;
+    max-width: 340px;
+
+    .cls-404-1, .cls-404-2 {
+      fill: $Primary-700;
+    }
+
+    .cls-404-2 {
+      font-size: 72px;
+      @include add-main-font();
+      font-weight: 500;
+    }
+
+    .cls-404-3{
+      font-size: .8rem;
+      @include add-main-font();
+      fill: $Primary-400;
+
+    }
+
+  }
+
+
+
+
+}

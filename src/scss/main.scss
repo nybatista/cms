@@ -1,0 +1,90 @@
+//@import "./node_modules/highlight.js/scss/stackoverflow-dark";
+//@import "01-vendors/highlights-themes/solarized-dark";
+@use "sass:list";
+@use "sass:map";
+@use "sass:string";
+//@use "01-vendors/highlights-themes/an-old-hope";
+
+@use "01-vendors/hljs-theme" as *;
+@use "02-variables/globals";
+@use "02-variables/mixins";
+@use "02-variables/palette";
+@use "02-variables/palette-mixins";
+@use "02-variables/palette-mixins-legacy";
+@use "03-components/ui/scrollbar";
+@use "spyne-plugin-json-cms";
+
+@use "03-components/spyne-cms/spyne-cms-item";
+@use "03-components/spyne-cms/cms-data-panel-holder";
+@use "03-components/spyne-cms/cms-data-panel";
+@use "03-components/spyne-cms/cms-data-panel-item-tabs";
+@use "03-components/spyne-cms/cms-data-panel-ui";
+@use "03-components/spyne-cms/cms-data-panel-data";
+@use "03-components/spyne-cms/cms-data-panel-data-property";
+@use "03-components/spyne-cms/cms-data-panel-data-property-container";
+@use "03-components/spyne-cms/cms-data-panel-item-container";
+@use "03-components/spyne-cms/cms-data-panel-tinymce";
+@use "03-components/spyne-cms/cms-data-panel-item-primitives";
+@use "03-components/spyne-cms/cms-item-select-box.js";
+@use "03-components/spyne-plugin-json-cms/spyne-plugin-json-cms-menu";
+@use "03-components/spyne-plugin-json-cms/spyne-plugin-json-cms-ui/spyne-plugin-json-cms-ui";
+@use "03-components/spyne-plugin-json-cms/spyne-plugin-json-cms-ui/spyne-plugin-json-cms-ui-auth";
+@use "03-components/spyne-plugin-json-cms/spyne-plugin-json-cms-ui/spyne-plugin-json-cms-ui-modal";
+@use "03-components/spyne-plugin-json-cms/spyne-plugin-json-cms-ui/spyne-plugin-json-cms-ui-min-max-close";
+@use "03-components/spyne-plugin-json-cms/spyne-plugin-json-cms-ui/cms-ui-drag-handles";
+@use "03-components/spyne-plugin-json-cms/spyne-plugin-json-cms-ui/cms-ui-corners";
+@use "03-components/placeholder-app/placeholder-app";
+
+$sizes: 40px, 50px, 80px;
+
+
+@use "03-components/placeholder-app/placeholder-app-tailwind.scss";
+
+;
+//@debug map.get($font-weights, "medium");
+
+//
+//@debug list.nth([line1, line2, line3], -1);
+body.spyne-plugin-cms-mode{
+
+  align-items: start !important;
+  main{
+    width: 50% !important;
+  }
+}
+
+//@include lightDark('--ld-primary-100', $Primary-100, $Primary-900);
+//$ldPrimary-100: var(--ld-primary-100);
+
+body.spyne-plugin-cms-mode{
+  background: #000;
+
+  main#spyne-plugin-json-cms{
+    position:relative;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    max-width: 1920px;
+    align-self: center;
+    justify-self: center;
+    border: 0;
+    margin: 0;
+    border-left:  1px solid #000;
+    border-right: 1px solid #000;
+    #dynamic-app-ui{
+      position: fixed;
+    }
+
+    @include cms-hljs-theme;
+
+  }
+
+ // background:$ldSupporting-4-050;
+
+ // background:   var(--ld-primary-100);
+}
+
+html,body,main,section,article,div,h1,h2,h3,h4,h5,h6,p,div,span{
+  @include mixins.add-main-font;
+}

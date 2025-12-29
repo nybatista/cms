@@ -1,0 +1,17 @@
+/* Error: Undefined variable.
+ *   ,
+ * 7 |     min-height: calc(100% - #{$app-header-height*1.25});
+ *   |                               ^^^^^^^^^^^^^^^^^^
+ *   '
+ *   app-pages.scss 7:31  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 7 \2502      min-height: calc(100% - #{$app-header-height*1.25});\a   \2502                                ^^^^^^^^^^^^^^^^^^\a   \2575 \a   app-pages.scss 7:31  root stylesheet";
+}

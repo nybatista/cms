@@ -1,0 +1,2774 @@
+@charset "UTF-8";
+/* 
+
+An Old Hope – Star Wars Syntax (c) Gustavo Costa <gusbemacbe@gmail.com>
+Original theme - Ocean Dark Theme – by https://github.com/gavsiu
+Based on Jesse Leite's Atom syntax theme 'An Old Hope' – https://github.com/JesseLeite/an-old-hope-syntax-atom
+
+*/
+/* Death Star Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #B6B18B;
+}
+
+/* Darth Vader */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #EB3C54;
+}
+
+/* Threepio */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #E7CE56;
+}
+
+/* Luke Skywalker */
+.hljs-attribute {
+  color: #EE7C2B;
+}
+
+/* Obi Wan Kenobi */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #4FB4D7;
+}
+
+/* Yoda */
+.hljs-title,
+.hljs-section {
+  color: #78BB65;
+}
+
+/* Mace Windu */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #B45EA4;
+}
+
+/* Millenium Falcon */
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #1C1D21;
+  color: #c0c5ce;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-primary-050: #0a1043;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-primary-050: #E0E8F9;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-050: #E0E8F9;
+  }
+}
+:root[data-theme=light] {
+  --ld-primary-050: #E0E8F9;
+}
+
+:root {
+  --ld-primary-050: #0a1043;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-050: #0a1043;
+  }
+}
+:root[data-theme=dark] {
+  --ld-primary-050: #0a1043;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-primary-100: #19216C;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-primary-100: #BED0F7;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-100: #BED0F7;
+  }
+}
+:root[data-theme=light] {
+  --ld-primary-100: #BED0F7;
+}
+
+:root {
+  --ld-primary-100: #19216C;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-100: #19216C;
+  }
+}
+:root[data-theme=dark] {
+  --ld-primary-100: #19216C;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-primary-200: #2D3A8C;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-primary-200: #98AEEB;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-200: #98AEEB;
+  }
+}
+:root[data-theme=light] {
+  --ld-primary-200: #98AEEB;
+}
+
+:root {
+  --ld-primary-200: #2D3A8C;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-200: #2D3A8C;
+  }
+}
+:root[data-theme=dark] {
+  --ld-primary-200: #2D3A8C;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-primary-300: #35469C;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-primary-300: #7B93DB;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-300: #7B93DB;
+  }
+}
+:root[data-theme=light] {
+  --ld-primary-300: #7B93DB;
+}
+
+:root {
+  --ld-primary-300: #35469C;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-300: #35469C;
+  }
+}
+:root[data-theme=dark] {
+  --ld-primary-300: #35469C;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-primary-400: #4055A8;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-primary-400: #647ACB;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-400: #647ACB;
+  }
+}
+:root[data-theme=light] {
+  --ld-primary-400: #647ACB;
+}
+
+:root {
+  --ld-primary-400: #4055A8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-400: #4055A8;
+  }
+}
+:root[data-theme=dark] {
+  --ld-primary-400: #4055A8;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-primary-425: #4055A8;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-primary-425: #647ACB;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-425: #647ACB;
+  }
+}
+:root[data-theme=light] {
+  --ld-primary-425: #647ACB;
+}
+
+:root {
+  --ld-primary-425: #4055A8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-425: #4055A8;
+  }
+}
+:root[data-theme=dark] {
+  --ld-primary-425: #4055A8;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-primary-500: #647ACB;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-primary-500: #4C63B6;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-500: #4C63B6;
+  }
+}
+:root[data-theme=light] {
+  --ld-primary-500: #4C63B6;
+}
+
+:root {
+  --ld-primary-500: #647ACB;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-500: #647ACB;
+  }
+}
+:root[data-theme=dark] {
+  --ld-primary-500: #647ACB;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-primary-600: #7B93DB;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-primary-600: #4055A8;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-600: #4055A8;
+  }
+}
+:root[data-theme=light] {
+  --ld-primary-600: #4055A8;
+}
+
+:root {
+  --ld-primary-600: #7B93DB;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-600: #7B93DB;
+  }
+}
+:root[data-theme=dark] {
+  --ld-primary-600: #7B93DB;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-primary-700: #98AEEB;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-primary-700: #35469C;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-700: #35469C;
+  }
+}
+:root[data-theme=light] {
+  --ld-primary-700: #35469C;
+}
+
+:root {
+  --ld-primary-700: #98AEEB;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-700: #98AEEB;
+  }
+}
+:root[data-theme=dark] {
+  --ld-primary-700: #98AEEB;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-primary-800: #BED0F7;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-primary-800: #2D3A8C;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-800: #2D3A8C;
+  }
+}
+:root[data-theme=light] {
+  --ld-primary-800: #2D3A8C;
+}
+
+:root {
+  --ld-primary-800: #BED0F7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-800: #BED0F7;
+  }
+}
+:root[data-theme=dark] {
+  --ld-primary-800: #BED0F7;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-primary-900: #E0E8F9;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-primary-900: #19216C;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-900: #19216C;
+  }
+}
+:root[data-theme=light] {
+  --ld-primary-900: #19216C;
+}
+
+:root {
+  --ld-primary-900: #E0E8F9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-primary-900: #E0E8F9;
+  }
+}
+:root[data-theme=dark] {
+  --ld-primary-900: #E0E8F9;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-neutral-050: #000000;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-neutral-050: #F5F7FA;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-050: #F5F7FA;
+  }
+}
+:root[data-theme=light] {
+  --ld-neutral-050: #F5F7FA;
+}
+
+:root {
+  --ld-neutral-050: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-050: #000000;
+  }
+}
+:root[data-theme=dark] {
+  --ld-neutral-050: #000000;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-neutral-100: #1F2933;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-neutral-100: #E4E7EB;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-100: #E4E7EB;
+  }
+}
+:root[data-theme=light] {
+  --ld-neutral-100: #E4E7EB;
+}
+
+:root {
+  --ld-neutral-100: #1F2933;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-100: #1F2933;
+  }
+}
+:root[data-theme=dark] {
+  --ld-neutral-100: #1F2933;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-neutral-200: #323F4B;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-neutral-200: #CBD2D9;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-200: #CBD2D9;
+  }
+}
+:root[data-theme=light] {
+  --ld-neutral-200: #CBD2D9;
+}
+
+:root {
+  --ld-neutral-200: #323F4B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-200: #323F4B;
+  }
+}
+:root[data-theme=dark] {
+  --ld-neutral-200: #323F4B;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-neutral-300: #3E4C59;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-neutral-300: #9AA5B1;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-300: #9AA5B1;
+  }
+}
+:root[data-theme=light] {
+  --ld-neutral-300: #9AA5B1;
+}
+
+:root {
+  --ld-neutral-300: #3E4C59;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-300: #3E4C59;
+  }
+}
+:root[data-theme=dark] {
+  --ld-neutral-300: #3E4C59;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-neutral-400: #52606D;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-neutral-400: #7B8794;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-400: #7B8794;
+  }
+}
+:root[data-theme=light] {
+  --ld-neutral-400: #7B8794;
+}
+
+:root {
+  --ld-neutral-400: #52606D;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-400: #52606D;
+  }
+}
+:root[data-theme=dark] {
+  --ld-neutral-400: #52606D;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-neutral-500: #7B8794;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-neutral-500: #616E7C;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-500: #616E7C;
+  }
+}
+:root[data-theme=light] {
+  --ld-neutral-500: #616E7C;
+}
+
+:root {
+  --ld-neutral-500: #7B8794;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-500: #7B8794;
+  }
+}
+:root[data-theme=dark] {
+  --ld-neutral-500: #7B8794;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-neutral-600: #9AA5B1;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-neutral-600: #52606D;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-600: #52606D;
+  }
+}
+:root[data-theme=light] {
+  --ld-neutral-600: #52606D;
+}
+
+:root {
+  --ld-neutral-600: #9AA5B1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-600: #9AA5B1;
+  }
+}
+:root[data-theme=dark] {
+  --ld-neutral-600: #9AA5B1;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-neutral-700: #CBD2D9;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-neutral-700: #3E4C59;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-700: #3E4C59;
+  }
+}
+:root[data-theme=light] {
+  --ld-neutral-700: #3E4C59;
+}
+
+:root {
+  --ld-neutral-700: #CBD2D9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-700: #CBD2D9;
+  }
+}
+:root[data-theme=dark] {
+  --ld-neutral-700: #CBD2D9;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-neutral-800: #E4E7EB;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-neutral-800: #323F4B;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-800: #323F4B;
+  }
+}
+:root[data-theme=light] {
+  --ld-neutral-800: #323F4B;
+}
+
+:root {
+  --ld-neutral-800: #E4E7EB;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-800: #E4E7EB;
+  }
+}
+:root[data-theme=dark] {
+  --ld-neutral-800: #E4E7EB;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-neutral-900: #F5F7FA;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-neutral-900: #1F2933;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-900: #1F2933;
+  }
+}
+:root[data-theme=light] {
+  --ld-neutral-900: #1F2933;
+}
+
+:root {
+  --ld-neutral-900: #F5F7FA;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-neutral-900: #F5F7FA;
+  }
+}
+:root[data-theme=dark] {
+  --ld-neutral-900: #F5F7FA;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-1-050: #035388;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-1-050: #E3F8FF;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-050: #E3F8FF;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-1-050: #E3F8FF;
+}
+
+:root {
+  --ld-supporting-1-050: #035388;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-050: #035388;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-1-050: #035388;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-1-100: #035388;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-1-100: #B3ECFF;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-100: #B3ECFF;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-1-100: #B3ECFF;
+}
+
+:root {
+  --ld-supporting-1-100: #035388;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-100: #035388;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-1-100: #035388;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-1-200: #0B69A3;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-1-200: #81DEFD;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-200: #81DEFD;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-1-200: #81DEFD;
+}
+
+:root {
+  --ld-supporting-1-200: #0B69A3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-200: #0B69A3;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-1-200: #0B69A3;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-1-300: #127FBF;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-1-300: #5ED0FA;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-300: #5ED0FA;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-1-300: #5ED0FA;
+}
+
+:root {
+  --ld-supporting-1-300: #127FBF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-300: #127FBF;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-1-300: #127FBF;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-1-400: #1992D4;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-1-400: #40C3F7;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-400: #40C3F7;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-1-400: #40C3F7;
+}
+
+:root {
+  --ld-supporting-1-400: #1992D4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-400: #1992D4;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-1-400: #1992D4;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-1-500: #40C3F7;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-1-500: #2BB0ED;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-500: #2BB0ED;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-1-500: #2BB0ED;
+}
+
+:root {
+  --ld-supporting-1-500: #40C3F7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-500: #40C3F7;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-1-500: #40C3F7;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-1-600: #5ED0FA;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-1-600: #1992D4;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-600: #1992D4;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-1-600: #1992D4;
+}
+
+:root {
+  --ld-supporting-1-600: #5ED0FA;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-600: #5ED0FA;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-1-600: #5ED0FA;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-1-700: #81DEFD;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-1-700: #127FBF;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-700: #127FBF;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-1-700: #127FBF;
+}
+
+:root {
+  --ld-supporting-1-700: #81DEFD;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-700: #81DEFD;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-1-700: #81DEFD;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-1-800: #B3ECFF;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-1-800: #0B69A3;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-800: #0B69A3;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-1-800: #0B69A3;
+}
+
+:root {
+  --ld-supporting-1-800: #B3ECFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-800: #B3ECFF;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-1-800: #B3ECFF;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-1-900: #E3F8FF;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-1-900: #035388;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-900: #035388;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-1-900: #035388;
+}
+
+:root {
+  --ld-supporting-1-900: #E3F8FF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-1-900: #E3F8FF;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-1-900: #E3F8FF;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-2-050: #610316;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-2-050: #FFE3E3;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-050: #FFE3E3;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-2-050: #FFE3E3;
+}
+
+:root {
+  --ld-supporting-2-050: #610316;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-050: #610316;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-2-050: #610316;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-2-100: #610316;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-2-100: #FFBDBD;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-100: #FFBDBD;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-2-100: #FFBDBD;
+}
+
+:root {
+  --ld-supporting-2-100: #610316;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-100: #610316;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-2-100: #610316;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-2-200: #8A041A;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-2-200: #FF9B9B;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-200: #FF9B9B;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-2-200: #FF9B9B;
+}
+
+:root {
+  --ld-supporting-2-200: #8A041A;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-200: #8A041A;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-2-200: #8A041A;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-2-300: #AB091E;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-2-300: #F86A6A;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-300: #F86A6A;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-2-300: #F86A6A;
+}
+
+:root {
+  --ld-supporting-2-300: #AB091E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-300: #AB091E;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-2-300: #AB091E;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-2-400: #CF1124;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-2-400: #EF4E4E;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-400: #EF4E4E;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-2-400: #EF4E4E;
+}
+
+:root {
+  --ld-supporting-2-400: #CF1124;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-400: #CF1124;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-2-400: #CF1124;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-2-500: #EF4E4E;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-2-500: #E12D39;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-500: #E12D39;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-2-500: #E12D39;
+}
+
+:root {
+  --ld-supporting-2-500: #EF4E4E;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-500: #EF4E4E;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-2-500: #EF4E4E;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-2-600: #F86A6A;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-2-600: #CF1124;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-600: #CF1124;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-2-600: #CF1124;
+}
+
+:root {
+  --ld-supporting-2-600: #F86A6A;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-600: #F86A6A;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-2-600: #F86A6A;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-2-700: #FF9B9B;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-2-700: #AB091E;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-700: #AB091E;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-2-700: #AB091E;
+}
+
+:root {
+  --ld-supporting-2-700: #FF9B9B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-700: #FF9B9B;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-2-700: #FF9B9B;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-2-800: #FFBDBD;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-2-800: #8A041A;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-800: #8A041A;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-2-800: #8A041A;
+}
+
+:root {
+  --ld-supporting-2-800: #FFBDBD;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-800: #FFBDBD;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-2-800: #FFBDBD;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-2-900: #FFE3E3;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-2-900: #610316;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-900: #610316;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-2-900: #610316;
+}
+
+:root {
+  --ld-supporting-2-900: #FFE3E3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-2-900: #FFE3E3;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-2-900: #FFE3E3;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-3-050: #8D2B0B;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-3-050: #FFFBEA;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-050: #FFFBEA;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-3-050: #FFFBEA;
+}
+
+:root {
+  --ld-supporting-3-050: #8D2B0B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-050: #8D2B0B;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-3-050: #8D2B0B;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-3-100: #8D2B0B;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-3-100: #FFF3C4;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-100: #FFF3C4;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-3-100: #FFF3C4;
+}
+
+:root {
+  --ld-supporting-3-100: #8D2B0B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-100: #8D2B0B;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-3-100: #8D2B0B;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-3-200: #B44D12;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-3-200: #FCE588;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-200: #FCE588;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-3-200: #FCE588;
+}
+
+:root {
+  --ld-supporting-3-200: #B44D12;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-200: #B44D12;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-3-200: #B44D12;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-3-300: #CB6E17;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-3-300: #FADB5F;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-300: #FADB5F;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-3-300: #FADB5F;
+}
+
+:root {
+  --ld-supporting-3-300: #CB6E17;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-300: #CB6E17;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-3-300: #CB6E17;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-3-400: #DE911D;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-3-400: #F7C948;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-400: #F7C948;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-3-400: #F7C948;
+}
+
+:root {
+  --ld-supporting-3-400: #DE911D;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-400: #DE911D;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-3-400: #DE911D;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-3-500: #F7C948;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-3-500: #F0B429;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-500: #F0B429;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-3-500: #F0B429;
+}
+
+:root {
+  --ld-supporting-3-500: #F7C948;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-500: #F7C948;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-3-500: #F7C948;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-3-600: #FADB5F;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-3-600: #DE911D;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-600: #DE911D;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-3-600: #DE911D;
+}
+
+:root {
+  --ld-supporting-3-600: #FADB5F;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-600: #FADB5F;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-3-600: #FADB5F;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-3-700: #FCE588;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-3-700: #CB6E17;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-700: #CB6E17;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-3-700: #CB6E17;
+}
+
+:root {
+  --ld-supporting-3-700: #FCE588;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-700: #FCE588;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-3-700: #FCE588;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-3-800: #FFF3C4;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-3-800: #B44D12;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-800: #B44D12;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-3-800: #B44D12;
+}
+
+:root {
+  --ld-supporting-3-800: #FFF3C4;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-800: #FFF3C4;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-3-800: #FFF3C4;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-3-900: #FFFBEA;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-3-900: #8D2B0B;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-900: #8D2B0B;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-3-900: #8D2B0B;
+}
+
+:root {
+  --ld-supporting-3-900: #FFFBEA;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-3-900: #FFFBEA;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-3-900: #FFFBEA;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-4-050: #014D40;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-4-050: #EFFCF6;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-050: #EFFCF6;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-4-050: #EFFCF6;
+}
+
+:root {
+  --ld-supporting-4-050: #014D40;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-050: #014D40;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-4-050: #014D40;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-4-100: #014D40;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-4-100: #C6F7E2;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-100: #C6F7E2;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-4-100: #C6F7E2;
+}
+
+:root {
+  --ld-supporting-4-100: #014D40;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-100: #014D40;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-4-100: #014D40;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-4-200: #0C6B58;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-4-200: #8EEDC7;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-200: #8EEDC7;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-4-200: #8EEDC7;
+}
+
+:root {
+  --ld-supporting-4-200: #0C6B58;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-200: #0C6B58;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-4-200: #0C6B58;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-4-300: #147D64;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-4-300: #65D6AD;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-300: #65D6AD;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-4-300: #65D6AD;
+}
+
+:root {
+  --ld-supporting-4-300: #147D64;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-300: #147D64;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-4-300: #147D64;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-4-400: #199473;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-4-400: #3EBD93;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-400: #3EBD93;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-4-400: #3EBD93;
+}
+
+:root {
+  --ld-supporting-4-400: #199473;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-400: #199473;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-4-400: #199473;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-4-500: #3EBD93;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-4-500: #27AB83;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-500: #27AB83;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-4-500: #27AB83;
+}
+
+:root {
+  --ld-supporting-4-500: #3EBD93;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-500: #3EBD93;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-4-500: #3EBD93;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-4-600: #65D6AD;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-4-600: #199473;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-600: #199473;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-4-600: #199473;
+}
+
+:root {
+  --ld-supporting-4-600: #65D6AD;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-600: #65D6AD;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-4-600: #65D6AD;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-4-700: #8EEDC7;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-4-700: #147D64;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-700: #147D64;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-4-700: #147D64;
+}
+
+:root {
+  --ld-supporting-4-700: #8EEDC7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-700: #8EEDC7;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-4-700: #8EEDC7;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-4-800: #C6F7E2;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-4-800: #0C6B58;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-800: #0C6B58;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-4-800: #0C6B58;
+}
+
+:root {
+  --ld-supporting-4-800: #C6F7E2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-800: #C6F7E2;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-4-800: #C6F7E2;
+}
+
+#spyne-plugin-json-cms.dark {
+  --ld-supporting-4-900: #EFFCF6;
+}
+
+#spyne-plugin-json-cms.light {
+  --ld-supporting-4-900: #014D40;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-900: #014D40;
+  }
+}
+:root[data-theme=light] {
+  --ld-supporting-4-900: #014D40;
+}
+
+:root {
+  --ld-supporting-4-900: #EFFCF6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme=light]):not([data-theme=dark]) {
+    --ld-supporting-4-900: #EFFCF6;
+  }
+}
+:root[data-theme=dark] {
+  --ld-supporting-4-900: #EFFCF6;
+}
+
+#cms-data-panel-holder .cms-data-panel::-webkit-scrollbar, .toc-container::-webkit-scrollbar {
+  height: 8px;
+  width: 12px;
+  border-radius: 4px;
+}
+
+#cms-data-panel-holder .cms-data-panel::-webkit-scrollbar-track, .toc-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0 18px #323F4B;
+}
+
+#cms-data-panel-holder .cms-data-panel::-webkit-scrollbar-thumb, .toc-container::-webkit-scrollbar-thumb {
+  background-color: #647ACB;
+  outline: 1px solid #7B93DB;
+}
+
+#spyne-plugin-json-cms {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /*
+    &.light{
+      $colorMap:$light-mode;
+
+
+    }
+
+
+    &.dark {
+
+      $colorMap:$dark-mode;
+
+    }*/
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder {
+  box-sizing: border-box;
+  position: absolute;
+  height: 100%;
+  min-width: 180px;
+  min-height: 60px;
+  max-width: 85vw;
+  background: var(--ld-neutral-100);
+  transition: width, height 0.125s ease-out;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  font-family: sans-serif;
+  margin: 0 1rem;
+  overflow: visible;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder:active {
+  transition: none;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top {
+  top: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top #grabber {
+  bottom: 1px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.left {
+  left: 0;
+  margin-left: 0;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.right {
+  right: 0;
+  margin-right: 0;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom {
+  bottom: 0;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom #grabber {
+  top: 2px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder p {
+  position: relative;
+  line-height: 1.2rem;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.active #grabber {
+  position: absolute;
+  left: 0;
+  content: "spyne console";
+  font-family: sans-serif;
+  color: #ddd;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 0 1px;
+  width: calc(100% - 2px);
+  height: 15px;
+  cursor: pointer;
+  pointer-events: all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.active #grabber p {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+#spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder {
+  background: var(--ld-neutral-100);
+}
+#spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder #cms-ui #cms-ui-corners-container .corner-pin svg {
+  fill: var(--ld-primary-400);
+}
+#spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder #cms-ui #cms-max-min-close ul li svg path, #spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder #cms-ui #cms-max-min-close ul li svg rect {
+  fill: var(--ld-primary-400);
+}
+#spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder .panel-menu header {
+  color: var(--ld-primary-500);
+}
+#spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder .panel-menu #cms-panel-menu ul li {
+  color: var(--ld-primary-400);
+  border-bottom: 1px solid #655de700;
+}
+#spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder .panel-menu #cms-panel-menu ul li:first-child {
+  border-bottom: initial;
+}
+#spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder .panel-menu #cms-panel-menu ul li:first-child:before {
+  content: "VIEW ALL";
+  border-bottom: green;
+}
+#spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder .panel-menu #cms-panel-menu ul li:first-child.selected, #spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder .panel-menu #cms-panel-menu ul li:first-child.activated {
+  border-bottom: initial;
+}
+#spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder .panel-menu #cms-panel-menu ul li.activated {
+  border-bottom: 1px solid var(--ld-primary-500);
+}
+#spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder .panel-menu #cms-panel-menu ul li.selected {
+  border-bottom: 1px solid var(--ld-primary-500);
+  background: #002b36;
+}
+#spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder #cms-code-display pre {
+  color: #587277;
+  background-color: #002B34;
+}
+#spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder #cms-code-display pre span.key {
+  color: #7B95FF;
+}
+#spyne-plugin-json-cms.dark #spyne-plugin-json-cms-content-holder #cms-code-display pre span.val {
+  color: #859900;
+}
+#spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder {
+  background: var(--ld-neutral-100);
+}
+#spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder #cms-ui #cms-ui-corners-container .corner-pin svg {
+  fill: #268bd2;
+}
+#spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder #cms-ui #cms-max-min-close ul li svg path, #spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder #cms-ui #cms-max-min-close ul li svg rect {
+  fill: #268bd2;
+}
+#spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder .panel-menu header {
+  color: #000;
+}
+#spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder .panel-menu #cms-panel-menu ul li {
+  color: #268bd2;
+  border-bottom: 1px solid #268bd2;
+}
+#spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder .panel-menu #cms-panel-menu ul li:first-child {
+  border-bottom: initial;
+}
+#spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder .panel-menu #cms-panel-menu ul li:first-child:before {
+  content: "VIEW ALL";
+  border-bottom: green;
+}
+#spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder .panel-menu #cms-panel-menu ul li:first-child.selected, #spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder .panel-menu #cms-panel-menu ul li:first-child.activated {
+  border-bottom: initial;
+}
+#spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder .panel-menu #cms-panel-menu ul li.activated {
+  border-bottom: 1px solid #268bd2;
+}
+#spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder .panel-menu #cms-panel-menu ul li.selected {
+  border-bottom: 1px solid #268bd2;
+  background: #FFFFFF;
+}
+#spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder #cms-code-display pre {
+  color: #657b83;
+  background-color: #FFFFFF;
+}
+#spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder #cms-code-display pre span.key {
+  color: #002b36;
+}
+#spyne-plugin-json-cms.light #spyne-plugin-json-cms-content-holder #cms-code-display pre span.val {
+  color: #586e75;
+}
+spyne-cms-item {
+  position: relative;
+  display: inline-block;
+  /*
+  svg{
+    position: absolute;;
+
+    width: calc(100% + 0px);
+    height: calc(100% + 0px);
+
+    pointer-events: auto;
+    cursor: pointer;
+    display: inline-block;;
+    background: rgba(123,123,222,.1);
+    //border:1px solid green;
+
+    rect {
+      stroke-width: 2px;
+      stroke: green;
+      fill:none;;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+  */
+}
+spyne-cms-item spyne-cms-item-hitbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: contents;
+  pointer-events: none;
+}
+spyne-cms-item spyne-cms-item-hitbox svg {
+  position: absolute;
+  width: calc(100% + 0px);
+  height: calc(100% + 0px);
+  pointer-events: none;
+  display: inline-block;
+  visibility: hidden;
+}
+spyne-cms-item spyne-cms-item-hitbox svg rect {
+  fill: none;
+  pointer-events: visiblePainted;
+  cursor: pointer;
+  visibility: visible;
+  opacity: 0;
+}
+spyne-cms-item spyne-cms-item-hitbox svg rect.stroked {
+  stroke-width: 12px;
+  stroke: skyblue;
+  width: 100%;
+  height: 100%;
+}
+spyne-cms-item spyne-cms-item-hitbox svg rect.stroked:hover {
+  stroke: royalblue;
+}
+spyne-cms-item spyne-cms-item-hitbox svg rect.box {
+  width: 30px;
+  height: 30px;
+  max-width: 80%;
+  max-height: 80%;
+  fill: skyblue;
+}
+spyne-cms-item spyne-cms-item-hitbox svg rect.box:hover {
+  fill: royalblue;
+}
+
+#cms-data-panel-holder {
+  position: absolute;
+  margin: 2rem;
+  padding: 2rem 0;
+  width: calc(100% - 4rem);
+  height: calc(100% - 150px);
+  overflow: hidden;
+}
+#cms-data-panel-holder .data-panels-container {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background: #1F2933;
+  border-top: 8px solid #3E4C59;
+  border-bottom: 8px solid #3E4C59;
+}
+
+.cms-data-panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #3E4C59;
+}
+
+#cms1-data-panel-tabs-container {
+  position: relative;
+  width: 100%;
+  background: orange;
+}
+
+#cms-data-panel-tabs-container {
+  position: relative;
+  width: 100%;
+}
+#cms-data-panel-tabs-container #cms-data-panels-tab-holder {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+#cms-data-panel-tabs-container #cms-data-panels-tab-holder .cms-data-panel-tab {
+  position: relative;
+  width: 22ch;
+  height: 100%;
+  color: #CBD2D9;
+  background: #323F4B;
+  padding: 12px;
+  margin: 0 1rem 0 0;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  cursor: pointer;
+  pointer-events: all;
+}
+#cms-data-panel-tabs-container #cms-data-panels-tab-holder .cms-data-panel-tab:hover {
+  background: #52606D;
+}
+#cms-data-panel-tabs-container #cms-data-panels-tab-holder .cms-data-panel-tab.focus {
+  background: #3E4C59;
+}
+
+#cms-data-panel-ui {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+#cms-data-panel-ui.hide .cms-data-panel-ui-holder.ui-holder-bottom {
+  display: none;
+}
+#cms-data-panel-ui .cms-data-panel-ui-holder {
+  position: relative;
+  width: 100%;
+  margin: 0 3rem;
+}
+#cms-data-panel-ui .cms-data-panel-ui-holder.ui-holder-bottom {
+  position: absolute;
+  bottom: 3rem;
+}
+#cms-data-panel-ui .cms-data-panel-ui-holder.ui-holder-bottom button {
+  pointer-events: all;
+  color: #CBD2D9;
+  font-family: "Nunito", sans-serif;
+}
+#cms-data-panel-ui .cms-data-panel-ui-holder.ui-holder-bottom button.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+#cms-data-panel-ui #cms-data-publish-btn-holder {
+  position: relative;
+}
+
+@keyframes close-animate {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+#cms-data-panel-holder .cms-data-panel {
+  position: absolute;
+  top: 0;
+  color: #CBD2D9;
+  overflow-y: scroll;
+  pointer-events: all;
+  z-index: 10;
+}
+#cms-data-panel-holder .cms-data-panel.focus {
+  z-index: 100;
+}
+#cms-data-panel-holder .cms-data-panel dl {
+  position: relative;
+  margin: 1rem 0 1rem 20px;
+  max-width: 800px;
+  padding: 0 0 2rem 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+#cms-data-panel-holder .cms-data-panel dl dt {
+  font-size: 1.25rem;
+  padding: 0.25rem 0;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem;
+}
+#cms-data-panel-holder .cms-data-panel dl dd {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-width: 500px;
+  padding: 0.25rem 0;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  justify-content: space-between;
+}
+#cms-data-panel-holder .cms-data-panel dl dd label {
+  position: relative;
+  margin-left: 1rem;
+  position: absolute;
+  margin-left: 1rem;
+  width: 700px;
+  height: 100%;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.075);
+}
+#cms-data-panel-holder .cms-data-panel input, #cms-data-panel-holder .cms-data-panel textarea {
+  background: #3E4C59;
+  color: #CBD2D9;
+  pointer-events: all;
+  max-width: 300px;
+  width: 100%;
+  padding: 0.5rem;
+  left: 50%;
+  position: relative;
+  margin: 1.5rem 0 0 0 0;
+  top: 8px;
+}
+
+#cms-item-select-box {
+  position: absolute;
+  top: 445px;
+  left: 592px;
+  cursor: pointer;
+  pointer-events: none;
+  /*
+   rect.cms-select-item-border{
+      position: absolute;
+      top:0;
+      left:0;
+       width: 100%;
+      height: 100%;
+      stroke-width: 2px;
+      stroke: orange;// 2px solid orange;
+      border-radius: 6;
+      visibility: visible;;
+      pointer-events:visiblePainted;
+
+
+    }
+    rect.cms-select-item-hitbox{
+      position: absolute;
+  !*    top:2px;
+      left:2px;*!
+      width: calc(100% - 4px);
+      height:  calc(100% - 4px);
+      stroke: green;
+      stroke-width: 8px;
+      //border: 8px solid green;
+     // border-radius: 6;
+      opacity: .3;
+      pointer-events:visiblePainted;
+
+    }*/
+}
+#cms-item-select-box svg#cms-item-border {
+  width: 100%;
+  height: 100%;
+}
+#cms-item-select-box svg#cms-item-border rect {
+  position: absolute;
+}
+#cms-item-select-box svg#cms-item-border rect.cms-select-item-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  stroke-width: 2px;
+  stroke: orange;
+  fill: none;
+  border-radius: 6;
+  visibility: visible;
+  pointer-events: visiblePainted;
+}
+#cms-item-select-box svg#cms-item-border rect.cms-select-item-hitbox {
+  position: absolute;
+  /*    top:2px;
+      left:2px;*/
+  stroke: rgba(0, 0, 0, 0);
+  stroke-width: 4px;
+  fill: none;
+  pointer-events: visiblePainted;
+}
+#cms-item-select-box svg#pencil {
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  visibility: visible;
+  pointer-events: visiblePainted;
+}
+#cms-item-select-box svg#pencil .pencil-cls-1a {
+  fill: #fff;
+  stroke: #fff;
+  stroke-width: 4px;
+}
+#cms-item-select-box svg#pencil .pencil-cls-1 {
+  fill: #fff;
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-miterlimit: 10;
+  stroke-width: 4px;
+}
+#cms-item-select-box svg#pencil .pencil-cls-2 {
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 4px;
+}
+
+#spyne-plugin-json-cms header {
+  position: absolute;
+  width: fit-content;
+  min-height: 40px;
+  margin: 2px 0 0 0;
+}
+#spyne-plugin-json-cms header h5 {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  left: 24px;
+  letter-spacing: 1px;
+  color: #fff;
+  opacity: 0.5;
+  top: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+}
+#spyne-plugin-json-cms .panel-menu {
+  position: relative;
+  user-select: none;
+  overflow: hidden;
+  flex-shrink: 3;
+}
+#spyne-plugin-json-cms .panel-menu #cms-panel-menu {
+  position: relative;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+}
+#spyne-plugin-json-cms .panel-menu #cms-panel-menu ul {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 25px 0 20px;
+  flex-wrap: wrap;
+  padding: 0;
+  max-width: fit-content;
+  list-style-type: none;
+}
+#spyne-plugin-json-cms .panel-menu #cms-panel-menu ul li {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.4;
+  pointer-events: all;
+  margin: 4px 0;
+  font-family: Helvetica, sans-serif;
+}
+#spyne-plugin-json-cms .panel-menu #cms-panel-menu ul li p {
+  position: relative;
+  margin: 0;
+  padding: 0 4px;
+  font-family: Helvetica, sans-serif;
+}
+#spyne-plugin-json-cms .panel-menu #cms-panel-menu ul li:first-child {
+  flex-basis: 100%;
+  align-self: flex-start;
+  text-align: left;
+  margin: 5px 0 10px 0;
+}
+#spyne-plugin-json-cms .panel-menu #cms-panel-menu ul li:hover {
+  opacity: 0.8;
+}
+#spyne-plugin-json-cms .panel-menu #cms-panel-menu ul li.activated {
+  opacity: 0.8;
+  transition: all 0.5s ease;
+}
+#spyne-plugin-json-cms .panel-menu #cms-panel-menu ul li.selected {
+  opacity: 1;
+  pointer-events: none;
+  padding: 0 4px;
+}
+
+#spyne-plugin-json-cms #cms-ui {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #cms-ui #cms-ui-controls {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  margin-right: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#spyne-plugin-json-cms #cms-ui #cms-ui-controls .mat-icon {
+  color: var(--ld-neutral-300);
+}
+
+#spyne-plugin-json-cms #cms-ui #cms-max-min-close {
+  position: relative;
+}
+#spyne-plugin-json-cms #cms-ui #cms-max-min-close ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+#spyne-plugin-json-cms #cms-ui #cms-max-min-close ul li.ui-option {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0.5rem;
+  opacity: 0.5;
+  pointer-events: all;
+  cursor: pointer;
+}
+#spyne-plugin-json-cms #cms-ui #cms-max-min-close ul li.ui-option svg circle {
+  fill: rgba(0, 0, 0, 0);
+}
+#spyne-plugin-json-cms #cms-ui #cms-max-min-close ul li.ui-option svg rect {
+  opacity: 0.5;
+}
+#spyne-plugin-json-cms #cms-ui #cms-max-min-close ul li.ui-option:hover {
+  opacity: 1;
+}
+#spyne-plugin-json-cms #cms-ui #cms-max-min-close ul li.ui-option:hover svg rect {
+  opacity: 0.9;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top .drag-handle.side.bottom {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.right .drag-handle.side.left {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom .drag-handle.side.top {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.left .drag-handle.side.right {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.right .corner-pin.top.right {
+  pointer-events: none;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.right .corner-pin.top.right svg rect {
+  opacity: 0.2;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.right .corner-pin.top.right svg circle#selected {
+  opacity: 0.5;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.right .drag-handle.corner.bottom-left {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.left .corner-pin.top.left {
+  pointer-events: none;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.left .corner-pin.top.left svg rect {
+  opacity: 0.2;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.left .corner-pin.top.left svg circle#selected {
+  opacity: 0.5;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.top.left .drag-handle.corner.bottom-right {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.right .corner-pin.bottom.right {
+  pointer-events: none;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.right .corner-pin.bottom.right svg rect {
+  opacity: 0.2;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.right .corner-pin.bottom.right svg circle#selected {
+  opacity: 0.5;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.right .drag-handle.corner.top-left {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.left div.corner-pin.bottom.left {
+  pointer-events: none;
+  opacity: 1;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.left div.corner-pin.bottom.left svg rect {
+  opacity: 0.2;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.left div.corner-pin.bottom.left svg circle#selected {
+  opacity: 0.5;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder.bottom.left .drag-handle.corner.top-right {
+  pointer-events: all;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000000000;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle {
+  position: absolute;
+  background: green;
+  opacity: 0;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle:active::after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: blue;
+  content: " ";
+  z-index: 1;
+  opacity: 0;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner {
+  width: 1rem;
+  height: 1rem;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.top-left, #spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.top-right {
+  top: -2px;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.top-left {
+  left: -0.25rem;
+  cursor: se-resize;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.top-right {
+  right: -0.25rem;
+  cursor: sw-resize;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.bottom-right, #spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.bottom-left {
+  bottom: -0.25rem;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.bottom-right {
+  right: -0.25rem;
+  cursor: nw-resize;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.corner.bottom-left {
+  left: -0.25rem;
+  cursor: ne-resize;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side {
+  background: skyblue;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.top, #spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.bottom {
+  width: calc(100% - 2rem);
+  height: 1rem;
+  left: 1rem;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.left, #spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.right {
+  top: 1rem;
+  width: 1rem;
+  height: calc(100% - 2rem);
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.left:active, #spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.right:active {
+  z-index: 1000000000;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.left {
+  left: -0.75rem;
+  cursor: e-resize;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.right {
+  right: calc(-1rem + 2px);
+  cursor: w-resize;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.top {
+  top: -0.75rem;
+  cursor: s-resize;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-drag-handles-container .drag-handle.side.bottom {
+  bottom: -0.75rem;
+  cursor: n-resize;
+}
+
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder .corner-pin {
+  pointer-events: all;
+  opacity: 0.3;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder .corner-pin svg #selected {
+  opacity: 0;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-corners-container div.corner-pin {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-corners-container div.corner-pin:hover {
+  opacity: 1;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-corners-container div.corner-pin:hover svg circle#selected {
+  opacity: 1;
+  transition: all 0.25s ease;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-corners-container div.corner-pin.top.left {
+  left: 6px;
+  top: 6px;
+  transform: rotateX(180deg);
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-corners-container div.corner-pin.top.right {
+  right: 6px;
+  top: 6px;
+  transform: rotate(180deg);
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-corners-container div.corner-pin.bottom.left {
+  bottom: 6px;
+  left: 6px;
+}
+#spyne-plugin-json-cms #spyne-plugin-json-cms-content-holder #cms-ui-corners-container div.corner-pin.bottom.right {
+  bottom: 6px;
+  right: 6px;
+  transform: rotateY(-180deg);
+}
+
+body.spyne-plugin-cms-mode {
+  align-items: start !important;
+}
+body.spyne-plugin-cms-mode main {
+  width: 50% !important;
+}
+
+body {
+  background: var(--ld-supporting-4-050);
+}
+body main#spyne-plugin-json-cms {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  align-self: center;
+  justify-self: center;
+  border: 0;
+  margin: 0;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+body main#spyne-plugin-json-cms #dynamic-app-ui {
+  position: fixed;
+}
+
+html, body, main, section, article, div, h1, h2, h3, h4, h5, h6, p, div, span {
+  font-family: "Nunito", sans-serif;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,96 @@
+@use "../../02-variables/globals";
+@use "../../02-variables/mixins";
+@use "../../02-variables/palette";
+
+.basic-tooltip {
+  position: absolute;
+  background: palette.$Supporting-1-900;
+  color: palette.$Neutral-200;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(0.25rem);
+  transition: opacity 0.25s, transform 0.15s;
+  transition-delay: .1s;
+}
+
+button:hover, button:focus, a:hover, a:focus {
+  .basic-tooltip {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: .5s;
+  }
+
+}
+
+
+
+
+
+#app-ui {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;;
+  color: #333;
+  z-index: globals.$z-index-app-ui;
+  pointer-events: none;
+}
+
+#app-footer {
+  position: relative;
+  width: 100%;
+  @include mixins.add-border-shadow;
+  display: flex;
+  align-items: flex-end;
+  height: 56px;
+  background: palette.$Neutral-200;
+  color: palette.$Primary-100;
+  z-index: -1;
+  margin-top: 54px;
+
+  &.card-mode {
+    z-index: inherit;;
+    opacity: 1;
+  }
+
+  footer {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+
+
+    #footer-content {
+      color: palette.$Neutral-500;
+      padding: 0 .5rem;
+      background: none;
+      pointer-events: all;
+      border: none;
+      margin: 0;
+      height: 1.2rem;
+      width: 100%;
+
+      &:focus {
+        border: none;
+        outline: 1px solid palette.$Primary-300;
+      }
+    }
+  }
+
+  p {
+    color: palette.$Neutral-500;
+    opacity: 1;
+    padding: 0 .5rem;
+    margin: 0;
+  }
+
+}

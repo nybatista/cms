@@ -1,0 +1,18 @@
+/* Error: Undefined variable.
+ *    ,
+ * 46 |         "headlineColor" :$ldPrimary-500,
+ *    |                          ^^^^^^^^^^^^^^
+ *    '
+ *   02-variables/palette-mixins-legacy.scss 46:26  @import
+ *   spyne-plugin-json-cms.scss 1:9                 root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined variable.\a    \2577 \a 46 \2502          "headlineColor" :$ldPrimary-500,\a    \2502                           ^^^^^^^^^^^^^^\a    \2575 \a   02-variables/palette-mixins-legacy.scss 46:26  @import\a   spyne-plugin-json-cms.scss 1:9                 root stylesheet';
+}

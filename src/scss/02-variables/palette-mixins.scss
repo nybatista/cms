@@ -1,0 +1,180 @@
+@use "sass:list";
+@use "sass:map";
+@use "sass:string";
+@use "sass:math";
+@use "sass:selector";
+@use "mixins";
+@use "palette";
+
+
+
+$colorMap: ("$ldPrimary-050"        :   ( palette.$Primary-050,           palette.$Primary-1000 ),
+"$ldPrimary-075"        :   ( palette.$Primary-075,           palette.$Primary-975 ),
+"$ldPrimary-100"        :   ( palette.$Primary-100,           palette.$Primary-900 ),
+"$ldPrimary-200"        :   ( palette.$Primary-200,           palette.$Primary-800 ),
+"$ldPrimary-300"        :   ( palette.$Primary-300,           palette.$Primary-700 ),
+"$ldPrimary-400"        :   ( palette.$Primary-400,           palette.$Primary-625 ),
+"$ldPrimary-425"        :   ( palette.$Primary-425,           palette.$Primary-1000 ),
+"$ldPrimary-500"        :   ( palette.$Primary-500,           palette.$Primary-500 ),
+"$ldPrimary-600"        :   ( palette.$Primary-600,           palette.$Primary-425 ),
+"$ldPrimary-625"        :   ( palette.$Primary-625,           palette.$Primary-400 ),
+"$ldPrimary-700"        :   ( palette.$Primary-700,           palette.$Primary-300 ),
+"$ldPrimary-800"        :   ( palette.$Primary-800,           palette.$Primary-200 ),
+"$ldPrimary-900"        :   ( palette.$Primary-900,           palette.$Primary-100 ),
+"$ldPrimary-975"        :   ( palette.$Primary-975,           palette.$Primary-425 ),
+"$ldPrimary-1000"       :   ( palette.$Primary-1000,          palette.$Primary-050 ),
+"$ldNeutral-050"        :   ( palette.$Neutral-050,           palette.$Neutral-1000 ),
+"$ldNeutral-020"        :   ( palette.$Neutral-020,           palette.$Neutral-975 ),
+"$ldNeutral-075"        :   ( palette.$Neutral-075,           palette.$Neutral-975 ),
+"$ldNeutral-080"        :   ( palette.$Neutral-080,           palette.$Neutral-980 ),
+"$ldNeutral-085"        :   ( palette.$Neutral-085,           palette.$Neutral-980 ),
+"$ldNeutral-100"        :   ( palette.$Neutral-100,           palette.$Neutral-900 ),
+"$ldNeutral-110"        :   ( palette.$Neutral-100,           palette.$Neutral-910 ),
+"$ldNeutral-200"        :   ( palette.$Neutral-200,           palette.$Neutral-800 ),
+"$ldNeutral-210"        :   ( palette.$Neutral-210,           palette.$Neutral-800 ),
+"$ldNeutral-215"        :   ( palette.$Neutral-215,           palette.$Neutral-400 ),
+"$ldNeutral-220"        :   ( palette.$Neutral-220,           palette.$Neutral-800 ),
+"$ldNeutral-300"        :   ( palette.$Neutral-300,           palette.$Neutral-700 ),
+"$ldNeutral-320"        :   ( palette.$Neutral-320,           palette.$Neutral-700 ),
+"$ldNeutral-400"        :   ( palette.$Neutral-400,           palette.$Neutral-600 ),
+"$ldNeutral-500"        :   ( palette.$Neutral-500,           palette.$Neutral-500 ),
+"$ldNeutral-600"        :   ( palette.$Neutral-600,           palette.$Neutral-400 ),
+"$ldNeutral-700"        :   ( palette.$Neutral-700,           palette.$Neutral-300 ),
+"$ldNeutral-800"        :   ( palette.$Neutral-800,           palette.$Neutral-200 ),
+"$ldNeutral-900"        :   ( palette.$Neutral-900,           palette.$Neutral-100 ),
+"$ldNeutral-920"        :   ( palette.$Neutral-920,           palette.$Neutral-100 ),
+"$ldNeutral-975"        :   ( palette.$Neutral-975,           palette.$Neutral-100 ),
+"$ldNeutral-980"        :   ( palette.$Neutral-980,           palette.$Neutral-100 ),
+"$ldNeutral-1000"       :   ( palette.$Neutral-1000,          palette.$Neutral-050 ),
+"$ldSupporting-1-050"   :   ( palette.$Supporting-1-050,      palette.$Supporting-1-1000 ),
+"$ldSupporting-1-100"   :   ( palette.$Supporting-1-100,      palette.$Supporting-1-900 ),
+"$ldSupporting-1-200"   :   ( palette.$Supporting-1-200,      palette.$Supporting-1-800 ),
+"$ldSupporting-1-300"   :   ( palette.$Supporting-1-300,      palette.$Supporting-1-700 ),
+"$ldSupporting-1-400"   :   ( palette.$Supporting-1-400,      palette.$Supporting-1-600 ),
+"$ldSupporting-1-500"   :   ( palette.$Supporting-1-500,      palette.$Supporting-1-500 ),
+"$ldSupporting-1-600"   :   ( palette.$Supporting-1-600,      palette.$Supporting-1-400 ),
+"$ldSupporting-1-700"   :   ( palette.$Supporting-1-700,      palette.$Supporting-1-300 ),
+"$ldSupporting-1-800"   :   ( palette.$Supporting-1-800,      palette.$Supporting-1-200 ),
+"$ldSupporting-1-900"   :   ( palette.$Supporting-1-900,      palette.$Supporting-1-100 ),
+"$ldSupporting-1-1000"  :   ( palette.$Supporting-1-1000,     palette.$Supporting-1-050 ),
+"$ldSupporting-2-050"   :   ( palette.$Supporting-2-050,      palette.$Supporting-2-1000 ),
+"$ldSupporting-2-100"   :   ( palette.$Supporting-2-100,      palette.$Supporting-2-900 ),
+"$ldSupporting-2-200"   :   ( palette.$Supporting-2-200,      palette.$Supporting-2-800 ),
+"$ldSupporting-2-300"   :   ( palette.$Supporting-2-300,      palette.$Supporting-2-700 ),
+"$ldSupporting-2-400"   :   ( palette.$Supporting-2-400,      palette.$Supporting-2-600 ),
+"$ldSupporting-2-500"   :   ( palette.$Supporting-2-500,      palette.$Supporting-2-500 ),
+"$ldSupporting-2-600"   :   ( palette.$Supporting-2-600,      palette.$Supporting-2-400 ),
+"$ldSupporting-2-700"   :   ( palette.$Supporting-2-700,      palette.$Supporting-2-300 ),
+"$ldSupporting-2-800"   :   ( palette.$Supporting-2-800,      palette.$Supporting-2-200 ),
+"$ldSupporting-2-900"   :   ( palette.$Supporting-2-900,      palette.$Supporting-2-100 ),
+"$ldSupporting-2-1000"  :   ( palette.$Supporting-2-1000,     palette.$Supporting-2-050 ),
+"$ldSupporting-3-050"   :   ( palette.$Supporting-3-050,      palette.$Supporting-3-1000 ),
+"$ldSupporting-3-100"   :   ( palette.$Supporting-3-100,      palette.$Supporting-3-900 ),
+"$ldSupporting-3-200"   :   ( palette.$Supporting-3-200,      palette.$Supporting-3-800 ),
+"$ldSupporting-3-300"   :   ( palette.$Supporting-3-300,      palette.$Supporting-3-700 ),
+"$ldSupporting-3-400"   :   ( palette.$Supporting-3-400,      palette.$Supporting-3-600 ),
+"$ldSupporting-3-500"   :   ( palette.$Supporting-3-500,      palette.$Supporting-3-500 ),
+"$ldSupporting-3-600"   :   ( palette.$Supporting-3-600,      palette.$Supporting-3-400 ),
+"$ldSupporting-3-700"   :   ( palette.$Supporting-3-700,      palette.$Supporting-3-300 ),
+"$ldSupporting-3-800"   :   ( palette.$Supporting-3-800,      palette.$Supporting-3-200 ),
+"$ldSupporting-3-900"   :   ( palette.$Supporting-3-900,      palette.$Supporting-3-100 ),
+"$ldSupporting-3-1000"  :   ( palette.$Supporting-3-1000,     palette.$Supporting-3-050 ),
+"$ldSupporting-4-050"   :   ( palette.$Supporting-4-050,      palette.$Supporting-4-1000 ),
+"$ldSupporting-4-100"   :   ( palette.$Supporting-4-100,      palette.$Supporting-4-900 ),
+"$ldSupporting-4-200"   :   ( palette.$Supporting-4-200,      palette.$Supporting-4-800 ),
+"$ldSupporting-4-300"   :   ( palette.$Supporting-4-300,      palette.$Supporting-4-700 ),
+"$ldSupporting-4-400"   :   ( palette.$Supporting-4-400,      palette.$Supporting-4-600 ),
+"$ldSupporting-4-500"   :   ( palette.$Supporting-4-500,      palette.$Supporting-4-500 ),
+"$ldSupporting-4-600"   :   ( palette.$Supporting-4-600,      palette.$Supporting-4-400 ),
+"$ldSupporting-4-700"   :   ( palette.$Supporting-4-700,      palette.$Supporting-4-300 ),
+"$ldSupporting-4-800"   :   ( palette.$Supporting-4-800,      palette.$Supporting-4-200 ),
+"$ldSupporting-4-900"   :   ( palette.$Supporting-4-900,      palette.$Supporting-4-100 ),
+"$ldSupporting-4-1000"  :   ( palette.$Supporting-4-1000,     palette.$Supporting-4-050 ),);
+
+
+@include mixins.mapPaletteToVars($colorMap);
+
+$ldPrimary-050          :     var(--ld-primary-050);
+$ldPrimary-075          :     var(--ld-primary-075);
+$ldPrimary-100          :     var(--ld-primary-100);
+$ldPrimary-200          :     var(--ld-primary-200);
+$ldPrimary-300          :     var(--ld-primary-300);
+$ldPrimary-400          :     var(--ld-primary-400);
+$ldPrimary-425          :     var(--ld-primary-425);
+$ldPrimary-500          :     var(--ld-primary-500);
+$ldPrimary-600          :     var(--ld-primary-600);
+$ldPrimary-625          :     var(--ld-primary-625);
+$ldPrimary-700          :     var(--ld-primary-700);
+$ldPrimary-800          :     var(--ld-primary-800);
+$ldPrimary-900          :     var(--ld-primary-900);
+$ldPrimary-975          :     var(--ld-primary-975);
+$ldPrimary-1000         :     var(--ld-primary-1000);
+$ldNeutral-050          :     var(--ld-neutral-050);
+$ldNeutral-020          :     var(--ld-neutral-020);
+$ldNeutral-075          :     var(--ld-neutral-075);
+$ldNeutral-080          :     var(--ld-neutral-080);
+$ldNeutral-085          :     var(--ld-neutral-085);
+$ldNeutral-100          :     var(--ld-neutral-100);
+$ldNeutral-110          :     var(--ld-neutral-110);
+$ldNeutral-200          :     var(--ld-neutral-200);
+$ldNeutral-210          :     var(--ld-neutral-210);
+$ldNeutral-215          :     var(--ld-neutral-215);
+$ldNeutral-220          :     var(--ld-neutral-220);
+$ldNeutral-300          :     var(--ld-neutral-300);
+$ldNeutral-320          :     var(--ld-neutral-320);
+$ldNeutral-400          :     var(--ld-neutral-400);
+$ldNeutral-500          :     var(--ld-neutral-500);
+$ldNeutral-600          :     var(--ld-neutral-600);
+$ldNeutral-700          :     var(--ld-neutral-700);
+$ldNeutral-700-text     :     #ced3d9;
+$ldNeutral-800          :     var(--ld-neutral-800);
+$ldNeutral-900          :     var(--ld-neutral-900);
+$ldNeutral-920          :     var(--ld-neutral-920);
+$ldNeutral-975          :     var(--ld-neutral-975);
+$ldNeutral-980          :     var(--ld-neutral-980);
+$ldNeutral-1000         :     var(--ld-neutral-1000);
+$ldSupporting-1-050     :     var(--ld-supporting-1-050);
+$ldSupporting-1-100     :     var(--ld-supporting-1-100);
+$ldSupporting-1-200     :     var(--ld-supporting-1-200);
+$ldSupporting-1-300     :     var(--ld-supporting-1-300);
+$ldSupporting-1-400     :     var(--ld-supporting-1-400);
+$ldSupporting-1-500     :     var(--ld-supporting-1-500);
+$ldSupporting-1-600     :     var(--ld-supporting-1-600);
+$ldSupporting-1-700     :     var(--ld-supporting-1-700);
+$ldSupporting-1-800     :     var(--ld-supporting-1-800);
+$ldSupporting-1-900     :     var(--ld-supporting-1-900);
+$ldSupporting-1-1000    :     var(--ld-supporting-1-1000);
+$ldSupporting-2-050     :     var(--ld-supporting-2-050);
+$ldSupporting-2-100     :     var(--ld-supporting-2-100);
+$ldSupporting-2-200     :     var(--ld-supporting-2-200);
+$ldSupporting-2-300     :     var(--ld-supporting-2-300);
+$ldSupporting-2-400     :     var(--ld-supporting-2-400);
+$ldSupporting-2-500     :     var(--ld-supporting-2-500);
+$ldSupporting-2-600     :     var(--ld-supporting-2-600);
+$ldSupporting-2-700     :     var(--ld-supporting-2-700);
+$ldSupporting-2-800     :     var(--ld-supporting-2-800);
+$ldSupporting-2-900     :     var(--ld-supporting-2-900);
+$ldSupporting-2-1000    :     var(--ld-supporting-2-1000);
+$ldSupporting-3-050     :     var(--ld-supporting-3-050);
+$ldSupporting-3-100     :     var(--ld-supporting-3-100);
+$ldSupporting-3-200     :     var(--ld-supporting-3-200);
+$ldSupporting-3-300     :     var(--ld-supporting-3-300);
+$ldSupporting-3-400     :     var(--ld-supporting-3-400);
+$ldSupporting-3-500     :     var(--ld-supporting-3-500);
+$ldSupporting-3-600     :     var(--ld-supporting-3-600);
+$ldSupporting-3-700     :     var(--ld-supporting-3-700);
+$ldSupporting-3-800     :     var(--ld-supporting-3-800);
+$ldSupporting-3-900     :     var(--ld-supporting-3-900);
+$ldSupporting-3-1000    :     var(--ld-supporting-3-1000);
+$ldSupporting-4-050     :     var(--ld-supporting-4-050);
+$ldSupporting-4-100     :     var(--ld-supporting-4-100);
+$ldSupporting-4-200     :     var(--ld-supporting-4-200);
+$ldSupporting-4-300     :     var(--ld-supporting-4-300);
+$ldSupporting-4-400     :     var(--ld-supporting-4-400);
+$ldSupporting-4-500     :     var(--ld-supporting-4-500);
+$ldSupporting-4-600     :     var(--ld-supporting-4-600);
+$ldSupporting-4-700     :     var(--ld-supporting-4-700);
+$ldSupporting-4-800     :     var(--ld-supporting-4-800);
+$ldSupporting-4-900     :     var(--ld-supporting-4-900);
+$ldSupporting-4-1000    :     var(--ld-supporting-4-1000);
+

@@ -1,0 +1,64 @@
+@use "../../02-variables/palette";
+@use "../../02-variables/palette-mixins";
+
+
+#cms1-data-panel-tabs-container{
+  position: relative;
+  width: 100%;
+  //min-height: 50px;
+  background: orange;
+
+}
+
+
+#cms-data-panel-tabs-container {
+    position: relative;
+    width: 100%;
+    //min-height: 50px;
+    //background: orange;
+
+  #cms-data-panels-tab-holder {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-bottom:0;
+
+    .cms-data-panel-tab {
+
+      position: relative;;
+      width: 22ch;
+      height: 100%;
+      color: palette.$Neutral-200;
+      background: palette-mixins.$ldNeutral-200;
+      padding: 12px;
+      margin:0 1rem 0 0;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      cursor: pointer;
+      pointer-events: all;
+      p{
+        //color: palette-mixins.$ldNeutral-215;
+        color: palette-mixins.$ldNeutral-800;
+      }
+
+
+      &:hover{
+        background: palette-mixins.$ldNeutral-300;
+      }
+
+      &.focus{
+        background: palette-mixins.$ldNeutral-100;
+        p{
+          color: palette-mixins.$ldPrimary-900;
+        }
+      }
+
+
+    }
+
+
+  }
+
+
+
+}

@@ -1,0 +1,5 @@
+src/tests/**/*.test.js
+src/tests/mocks/*.js
+# Template files (SpyneJS HTML templates)
+**/*.tmpl.html
+**/*.html

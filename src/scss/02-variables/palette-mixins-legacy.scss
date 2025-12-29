@@ -1,0 +1,153 @@
+@use "sass:map";
+@use "palette";
+@use "palette-mixins";
+
+
+
+$plugin-json-cms-s2Blue1: #072F5A;
+$plugin-json-cms-s2Blue2: #C4D7E4;
+$plugin-json-cms-s2Blue3: #0B85FA;
+$plugin-json-cms-s2Blue4: #5A6C89;
+$plugin-json-cms-s2Blue5: #0060C8;
+
+$plugin-json-cms-codeBackground: #002B36;
+
+
+$plugin-json-cms-soloarizedDarkBg: #033641;
+$plugin-json-cms-soloarizedCodeBg: #002B34;
+$plugin-json-cms-solarizedWarm: #6A941F;
+$plugin-json-cms-solarizedBlue: #0C77C7;
+$plugin-json-cms-solarizedNeutral: #839496;
+
+
+$plugin-json-cms-hljsCodeBackground: #232323;
+
+$plugin-json-cms-base03:    #002b36;
+$plugin-json-cms-base02:    #073642;
+$plugin-json-cms-base01:    #586e75;
+$plugin-json-cms-base00:    #657b83;
+$plugin-json-cms-base0:     #839496;
+$plugin-json-cms-base1:     #93a1a1;
+$plugin-json-cms-base2:     #eee8d5;
+$plugin-json-cms-base3:     #fdf6e3;
+$plugin-json-cms-yellow:    #b58900;
+$plugin-json-cms-orange:    #cb4b16;
+$plugin-json-cms-red:       #dc322f;
+$plugin-json-cms-magenta:   #d33682;
+$plugin-json-cms-violet:    #6c71c4;
+$plugin-json-cms-blue:      #268bd2;
+$plugin-json-cms-cyan:      #2aa198;
+$plugin-json-cms-green:     #859900;
+
+$plugin-json-cms-jetBrainsBlue: #7B95FF;
+$plugin-json-cms-jetBrainsWarm: #B58900;
+$plugin-json-cms-jetBrainsNeutral: #587277;
+$plugin-json-cms-winterBackground: #FFFFFF;
+$plugin-json-cms-winterBackground2: #F3F3F3;
+
+$plugin-json-cms-dark-mode: (
+        "headlineColor" :palette-mixins.$ldPrimary-500,
+        "background" : palette-mixins.$ldPrimary-900,
+        "liColor" : palette-mixins.$ldPrimary-400,
+        "liBorderBottomInit" : #655de700,
+        "liBorderBottomActivated" : palette-mixins.$ldPrimary-500,
+        "liBorderBottomSelected" : palette-mixins.$ldPrimary-500,
+        "liSelectedBackground" : $plugin-json-cms-base03,
+        "codeBackground" : $plugin-json-cms-soloarizedCodeBg,
+        "hljsCodeBackground" : $plugin-json-cms-hljsCodeBackground,
+        "codeSyntaxColor" : $plugin-json-cms-jetBrainsNeutral,
+        "codeKeyColor" :   $plugin-json-cms-jetBrainsBlue,
+        "codeValColor" : $plugin-json-cms-green
+);
+
+
+$plugin-json-cms-light-mode: (
+        "headlineColor" : #000,
+        "background" : $plugin-json-cms-winterBackground2,
+        "liColor" : $plugin-json-cms-blue,
+        "liBorderBottomInit" : $plugin-json-cms-blue,
+        "liBorderBottomActivated" : $plugin-json-cms-blue,
+        "liBorderBottomSelected" : $plugin-json-cms-blue,
+        "liSelectedBackground" : $plugin-json-cms-winterBackground,
+        "codeBackground" : $plugin-json-cms-winterBackground,
+        "codeSyntaxColor" : $plugin-json-cms-base00,
+        "codeKeyColor" :   $plugin-json-cms-base03,
+        "codeValColor" :  $plugin-json-cms-base01
+);
+
+
+// SITEBLUES
+
+$plugin-json-cms-spyneBlueLight: $plugin-json-cms-s2Blue2;//lighten($plugin-json-cms-s1Blue2, 50);// $plugin-json-cms-bBlues5;
+$plugin-json-cms-mediumgray:  $plugin-json-cms-s2Blue4;////$plugin-json-cms-s2Blue3;
+$plugin-json-cms-darkgray:$plugin-json-cms-spyneBlueLight;
+$plugin-json-cms-slategray: orange;
+
+
+$colorTxtDevMode: (
+        "page" : palette.$Neutral-900,
+        'sideBar' :palette.$Neutral-900,
+        'callout' : palette.$Neutral-800
+
+);
+$colorTxtProdMode: (
+        "page" : palette.$Neutral-900,
+        'sideBar' :palette.$Neutral-900,
+        'callout' :palette.$Primary-800
+
+);
+
+$colorsBackgroundDevMode: (
+        "pageContainer" : palette.$Neutral-300,
+        "page" : palette.$Neutral-300,
+        'sideBar' : palette.$Neutral-400,
+        'callout' : palette.$Neutral-400
+);
+
+$colorsBackgroundProdMode: (
+        "pageContainer" : palette.$Neutral-050,
+        "page" : palette.$Neutral-050,
+        'sideBar' : palette.$Neutral-100,
+        'callout' : palette.$Supporting-1-050
+);
+
+$colorsBorderDevMode: (
+        "callout" : palette.$Supporting-1-800,
+
+);
+
+$colorsBorderProdMode: (
+        "callout" : palette.$Supporting-1-100,
+);
+
+
+$selectedColorsTextPalette: $colorTxtDevMode;
+$selectedColorsBackgroundPalette: $colorsBackgroundDevMode;
+$selectedColorsBorderPalette: $colorsBorderDevMode;
+
+
+$selectedColorsTextPalette: $colorTxtProdMode;
+$selectedColorsBackgroundPalette: $colorsBackgroundProdMode;
+$selectedColorsBorderPalette: $colorsBorderProdMode;
+
+
+
+@function txtColor($type){
+  @return map.get($selectedColorsTextPalette, $type);
+}
+
+
+
+@function borderColor($type){
+  @return map.get($selectedColorsBorderPalette, $type);
+
+}
+
+@function bgColor($type){
+  @return map.get($selectedColorsBackgroundPalette, $type);
+}
+
+
+
+
+

@@ -1,0 +1,148 @@
+@use "../../02-variables/palette-mixins";
+
+
+
+
+
+#cms-item-select-box{
+  position: absolute;
+
+  top: 445px;
+  left: 592px;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+
+  &.focused{
+    opacity: 1;
+    visibility: visible;
+  }
+  //background: rgba(255,0,0,.12);
+  //visibility: hidden;;
+/*
+ rect.cms-select-item-border{
+    position: absolute;
+    top:0;
+    left:0;
+     width: 100%;
+    height: 100%;
+    stroke-width: 2px;
+    stroke: orange;// 2px solid orange;
+    border-radius: 6;
+    visibility: visible;;
+    pointer-events:visiblePainted;
+
+
+  }
+  rect.cms-select-item-hitbox{
+    position: absolute;
+!*    top:2px;
+    left:2px;*!
+    width: calc(100% - 4px);
+    height:  calc(100% - 4px);
+    stroke: green;
+    stroke-width: 8px;
+    //border: 8px solid green;
+   // border-radius: 6;
+    opacity: .3;
+    pointer-events:visiblePainted;
+
+  }*/
+
+
+
+  svg#cms-item-border{
+    //position: absolute;
+    width:100%;
+    height: 100%;
+
+   // background: rgba(123,222,123,.2);
+    //display: inline-block;;
+
+    rect{
+      position: absolute;;
+    }
+
+
+    rect.cms-select-item-border{
+      position: absolute;
+      top:0;
+      left:0;
+
+      stroke-width: 4px;
+      stroke: palette-mixins.$ldSupporting-3-400;// 2px solid orange;
+      fill:none;
+      border-radius: 6;
+      visibility: visible;;
+      pointer-events:visiblePainted;
+      //display: block;
+
+
+    }
+    rect.cms-select-item-hitbox{
+      position: absolute;
+      /*    top:2px;
+          left:2px;*/
+
+      stroke: rgba(0,0,0,0);
+      stroke-width: 4px;
+      //border: 8px solid green;
+      // border-radius: 6;
+     // opacity: .3;
+      fill:none;
+      pointer-events:visiblePainted;
+      //display: none;
+
+    }
+
+
+
+
+  }
+
+  svg#pencil {
+    position: absolute;
+    left:-15px;
+    top:-15px;
+    width: 30px;
+    height: 30px;
+    visibility: visible;;
+    pointer-events:visiblePainted;
+
+     path#pencil-grp{
+       fill: palette-mixins.$ldSupporting-3-400;
+
+     }
+
+    .pencil-cls-1a {
+      fill: #fff;
+      stroke: #fff;
+      stroke-width: 4px;
+
+
+    }
+
+
+
+     .pencil-cls-1 {
+      fill: #fff;
+      stroke: rgba(255,255,255,.5);
+      stroke-miterlimit: 10;
+      stroke-width: 4px;
+    }
+
+
+
+
+    .pencil-cls-2 {
+      stroke: #fff;
+      stroke-miterlimit: 10;
+      stroke-width: 4px;
+    }
+
+
+  }
+
+
+}

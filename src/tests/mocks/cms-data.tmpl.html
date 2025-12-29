@@ -1,0 +1,26 @@
+<div class="generic template">
+
+    <h1>The title is {{level3.level4.title}}</h1>
+
+    <div data-is-final="{{finalBool}}"   ></div>
+        {{#arr2}}
+    <h3>animal: {{loopNum}}  {{.}}</h3>
+        {{/arr2}}
+
+    </div>
+
+        <div data-is-final="{{finalBool}}"   ></div>
+        {{#level3.arr2}}
+        <h3>animalq: {{loopNum}}: {{.}}</h3>
+        {{/level3.arr2}}
+
+        </div>
+    <div data-cms-id="{{level3.__cms__dataId}}">
+        {{#level3.anotherArr}}
+        <h3>yep: index:{{loopIndex}} num:{{loopNum}}: {{mood}}</h3>
+        {{/level3.anotherArr}}
+
+        <h3 id="my-id" class="the-class">{{level3.finalStr}}</h3>
+
+
+    </div>

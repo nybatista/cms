@@ -1,0 +1,38 @@
+@use "../../02-variables/palette-mixins";
+
+.cms-data-panel{
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: palette-mixins.$ldNeutral-080;
+
+  #nested-levels-tags-holder{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin-left: .25rem;
+    button{
+      position: relative;
+      top:1rem;
+      width: 8.5px;
+      margin-left: 1rem;
+      //height: 30px;
+      svg{
+        opacity: .5;
+        path{
+          fill: palette-mixins.$ldPrimary-900;
+        }
+      }
+
+      &.selected{
+        svg{
+          opacity: .8;
+        }
+      }
+
+    }
+
+
+  }
+}

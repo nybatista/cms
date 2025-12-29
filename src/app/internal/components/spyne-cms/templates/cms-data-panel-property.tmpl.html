@@ -1,0 +1,40 @@
+
+<label for="{{inputId}}" class="form-label inline-block mb-2 text-gray-100">
+    <div class="controls-container cms-data-panel-property-controls">
+        <div class="controls-holder">
+            <div class="ctrls controls-left">
+                <button class="cms-data-panel-btn dragger" data-type="dragger"  data-property-id="{{vsid}}">
+                    <span class="material-icons">drag_indicator</span>
+                </button>
+            </div>
+            <div class="ctrls controls-right">
+
+                <button class="cms-data-panel-btn expand-btn" data-type="expand" data-property-id="{{vsid}}">
+                    <span class="material-icons">more_horiz</span>
+                </button>
+
+               <button class="cms-data-panel-btn edit-string-button" data-panel-event-type="tinymce" data-is-gated="true" data-type="edit-string"  data-property-id="{{vsid}}">
+                    <span class="material-icons">edit_note</span>
+                </button>
+
+            </div>
+        </div>
+
+        <hr class="drag-hilight drag-hilight-property"  data-move-element-id="{{vsid}}" data-move-element-type="parent" data-append-type="appendViewAfter" data-cms-type="primitive"  data-cms-id="{{dataCmsId}}"   />
+
+
+    </div>
+
+    <input
+                    type="text"
+                    class="cms-panel-input type-key primitive"
+                    data-cms-id="{{dataCmsId}}" data-is-key=true data-cms-key="{{dataCmsKey}}"
+                    value="{{cmsKey}}" /></label>
+        <{{inputType}} rows="{{rowsNum}}" cols="24"
+                type="text"
+                class="cms-panel-input type-property"
+                data-cms-id="{{dataCmsId}}" data-cms-key="{{dataCmsKey}}"
+                id="{{inputId}}"
+             {{inputSuffix}}
+
+

@@ -1,0 +1,558 @@
+$anim-time: .35s;
+
+@keyframes cardMaxAnim {
+  0% {
+    top: var(--app-card-min-top);
+    left: var(--app-card-min-left);
+    width: var(--app-card-min-width);
+    height: var(--app-card-min-height);
+
+  }
+
+
+  100% {
+    top: 52px; // var(--app-card-max-top);
+    left: var(--app-card-max-left);
+    width: var(--app-card-max-width);
+    height: var(--app-card-max-height);
+  }
+
+
+}
+
+
+.app-page-subnav-container {
+  .page-card {
+    position: relative;
+    display: flex;
+    margin: 0 10px;
+    justify-content: center;
+    transition: opacity var(--card-anim-time) ease;
+    visibility: visible;;
+
+    &.hide {
+      visibility: hidden;;
+    }
+
+
+    @media(max-width: 768px) {
+      max-width: 100vw;
+    }
+
+    @media(max-width: 320px) {
+      max-width: 100vw;
+      min-height: 400px;;
+    }
+
+
+    &.hide-card {
+      opacity: 0;
+      transition: opacity .125s ease;
+      pointer-events: none;
+    }
+
+    .card-initial-size {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+
+    .card-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .card-scroll {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+
+        .card-material {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+
+          max-width: 1920px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          min-height: 240px;
+          background: #fff;
+
+          .back-btn {
+            position: relative;
+            display: none;
+            visibility: hidden;;
+          }
+
+
+          article, div.article {
+            position: relative;
+            text-decoration: none;
+            justify-content: center;;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+
+            a {
+              text-decoration: none;
+
+              svg {
+                width: 16px;
+
+                path {
+                  fill: $Primary-200;
+                }
+              }
+
+              &.expand-card {
+                &:focus {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  visibility: visible;;
+                  z-index: 12341234123;
+                  border: 2px solid blue;
+                }
+              }
+            }
+
+            // ================================
+            // INITIAL CARD CONTENT
+            // ================================
+            .card-content {
+              position: relative;
+              margin: 0;
+              min-height: 240px;
+              height: 100%;
+              background: #fff;
+              border-radius: 5px;
+              padding-bottom: 1rem;
+
+              @media(max-width: 768px) {
+                max-width: 100vw;
+              }
+
+              @media(max-width: 320px) {
+                max-width: 100vw;
+                min-height: 400px;;
+              }
+
+
+              .card-image {
+                position: relative;
+                top: 0;
+                padding: 0;
+                margin: 0;
+                border-radius: 0;
+                max-height: 31vh;
+                display: flex;
+                flex-direction: column;
+                background: #333;
+
+                figcaption {
+                  position: absolute;
+                  font-size: 2.3rem;
+                  color: #fff;
+                  z-index: 1;
+                  align-self: center;
+                  bottom: 1rem;
+                  opacity: 0;
+                  width: 100%;
+                  margin: 0;
+                  display: flex;
+                  flex-direction: column;
+                  transition: opacity .25s ease;
+
+                  align-items: center;
+                  padding: 1rem 0 2rem 0;
+
+                  p {
+                    position: relative;
+                    margin: 0;
+                    width: 100%;
+                    max-width: 960px;
+                    padding: 0 4rem;
+                  }
+
+                }
+
+                &:after {
+                  position: absolute;
+                  content: ' ';
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  opacity: 0;
+                  transition: opacity var(--card-anim-time) ease .25s;
+                  background: linear-gradient(to top, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0.0) 50%, rgba(0, 0, 0, 0) 100%);
+                }
+
+                width: 100%;
+                overflow: hidden;
+
+                img {
+                  position: relative;
+                  object-fit: cover;
+                  object-position: center;
+                  margin-top: 0;
+                  width: 100%;
+                  min-height: 100%;
+                }
+
+              }
+
+
+              dd, div.article, header {
+                top: 10px;
+
+                &.card-text {
+                  opacity: 1;
+                  transition: opacity var(--card-anim-time) ease;
+                  flex-grow: 0;
+
+                }
+
+                h3,
+                p {
+                  text-decoration: none;
+                  color: $Neutral-600;
+                  margin: 0 0 0 0;
+                  padding: 0;
+                  pointer-events: none;
+                  text-align: left;
+                }
+
+                h3 {
+                  font-size: 1rem;
+                  color: $Neutral-800;
+                  position: relative;
+                  display: flex;
+                  align-content: center;
+
+                  a {
+                    position: relative;
+                    top: 2px;
+                    margin-right: 4px;
+                  }
+                }
+
+                position: relative;
+                padding: 2px 22px;
+                margin: 0;
+              }
+
+            }
+
+          }
+
+          &:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          }
+
+          &:active {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+          }
+
+
+          .back-btn-top {
+            position: absolute;
+            top: 12px;
+            left: 0;
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 0 0 8px 2rem;
+            pointer-events: none;
+            opacity: 0;
+            border: none;
+            background: none;
+            visibility: hidden;
+
+
+            &::before {
+              position: absolute;
+              content: '\00a0';
+              top: 0;
+              left: 32px;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background: $Primary-800;
+              border: 4px solid $Primary-800;;
+            }
+
+
+            align-items: center;
+            color: $Primary-800;
+
+            svg {
+              position: relative;
+              top: 6.5px;
+              left: 0;
+
+              path {
+                fill: $Primary-050;
+              }
+
+              max-height: 32px;
+              margin-right: 13px;
+
+            }
+
+            p {
+              position: relative;
+              top: 1px;
+              font-size: .8rem;
+              margin: 0;
+              padding: 0;
+              line-height: 100%;
+
+            }
+          }
+        }
+      }
+
+
+      // ==================================
+      // MINIMIZE
+      // ==================================
+
+      @keyframes cardMaxAnimReverse {
+
+        0% {
+          top: 52px; //var(--app-card-max-top);
+          left: var(--app-card-max-left);
+          width: var(--app-card-max-width);
+          height: var(--app-card-max-height);
+        }
+
+
+        100% {
+          top: var(--app-card-min-top);
+          left: var(--app-card-min-left);
+          width: var(--app-card-min-width);
+          height: var(--app-card-min-height);
+          margin-left: 0;
+        }
+      }
+
+
+      @keyframes cardHeightImgReverse {
+        0% {
+          height: var(--app-card-img-max-height);
+        }
+
+        90% {
+
+        }
+
+        100% {
+          height: var(--app-card-img-min-height);
+
+        }
+
+      }
+
+      @keyframes cardHeightImg {
+        0% {
+          height: var(--app-card-img-min-height);
+        }
+
+        50% {
+          height: var(--app-card-img-max-height);
+        }
+
+
+        100% {
+          height: var(--app-card-img-max-height);
+        }
+
+      }
+
+
+      // ==================================
+      // MINIMIZE
+      // ==================================
+      &.minimize {
+        position: fixed;
+
+        z-index: $z-index-main-container;
+        display: flex;
+
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        .card-material {
+          animation: var(--expand-anim-reverse);
+
+          .card-image {
+            animation: var(--card-anim-reverse-time) ease-in-out cardHeightImgReverse;
+
+          }
+        }
+      }
+
+
+      // ==================================
+      // EXPANDED
+      // ==================================
+      &.expanded {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0 0 0 0;;
+        width: 100%;
+        height: 100%;
+        z-index: $z-index-main-container;
+
+
+        pointer-events: none;
+        display: flex;
+
+        .card-scroll {
+          position: relative;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;;
+          overflow-y: auto;
+          pointer-events: all;
+
+          &.scrollable {
+
+            @include screenQuery('min', 'xtraLarge') {
+              margin-left: var(--scroll-lock-margin);
+              width: calc(100% - 15px);
+            }
+
+          }
+
+
+          &::before {
+            position: relative;
+            top: 0;
+            height: 82px;
+            align-items: center;
+            max-height: 56px;
+            width: 100px;
+            content: "\00a0";
+            pointer-events: none;
+            display: none;
+          }
+
+          section.card-material {
+            position: absolute;;
+            margin: 0 0 0 0;
+            padding: 0;
+            top: 52px;
+            left: initial;
+            width: 100%;
+            height: calc(100% - 52px);
+            max-width: 1920px;
+            animation: var(--expand-anim);
+            z-index: 1000;
+            border: none;
+
+            article, div.article {
+              pointer-events: none;
+              position: relative;
+              display: block;
+              height: 100%;
+            }
+
+            .back-btn-top {
+              pointer-events: all;
+              opacity: 1;
+              z-index: $z-index-ui;
+              cursor: pointer;
+              visibility: visible;
+              transition: opacity .25s ease .25s;
+
+              svg {
+                opacity: .8;
+              }
+
+              &:hover {
+
+                svg {
+                  opacity: 1;
+                }
+
+              }
+            }
+
+            .card-content {
+              min-height: auto;
+              padding-bottom: 0;
+
+              figure.card-image {
+                height: 31vh;
+                animation: var(--card-anim-time) ease-in cardHeightImg;
+
+                &:after {
+                  opacity: 1;
+                }
+
+                figcaption {
+
+                  &.reveal {
+                    opacity: 1;
+                    transition: opacity .25s ease;
+                  }
+                }
+
+
+              }
+
+              header.card-text {
+                opacity: 0;
+                height: 0;
+              }
+
+              dd, div {
+                h3 {
+                  font-size: 1.2rem;
+                }
+
+              }
+            }
+          }
+        }
+      }
+
+      // ==================================
+      // END EXPANDED
+      // ==================================
+
+    }
+  }
+}

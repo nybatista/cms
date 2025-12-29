@@ -1,0 +1,56 @@
+{
+  "extends": ["standard"],
+  "env": {
+    "browser": true,
+    "es2022": true
+  },
+  "globals": {
+    "requestAnimationFrame": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module"
+  },
+  "rules": {
+    "key-spacing": [
+      "off",
+      {
+        "beforeColon": false,
+        "afterColon": true
+      }
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "never"
+      }
+    ],
+    "no-new": "off",
+    "camelcase": "off",
+    "no-unused-vars": [
+      "error",
+      {
+        "caughtErrors": "none",
+        "args": "none"
+      }
+    ],
+    "arrow-spacing": [
+      "error",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "no-return-assign": ["error", "except-parens"],
+    "no-multi-spaces": [
+      "error",
+      {
+        "exceptions": {
+          "VariableDeclarator": true
+        }
+      }
+    ]
+  }
+}

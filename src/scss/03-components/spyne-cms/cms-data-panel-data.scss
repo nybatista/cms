@@ -1,0 +1,846 @@
+@use "../../02-variables/globals" as globals;
+@use "../../02-variables/palette";
+@use "../../02-variables/palette-mixins";
+
+@use "sass:selector";
+@use 'sass:list';
+
+$sel: "dl > .spyne-cms-property-container > dd";
+$scoped: " > dl > .spyne-cms-property-container > dd";;;
+$sel1: ".cms-data-panel";
+$scoped1: ":scope > dl > .spyne-cms-property-container > dd";
+$nestedPropsSel: " > dl > .spyne-cms-property-container > dd";
+$selector: selector.nest($sel1, $scoped);
+
+$barWidth: 800px;
+$nestPadding: 25px;
+$inputLeftPadding: 350px;
+
+$collapseHeight: 37px;
+
+@debug $selector;
+
+
+
+.toggle-btn-closed{
+  transform: rotate(-90deg);
+  left: -2px;
+  //color: $ldSupporting-3-400;
+
+}
+
+.toggle-btn-open{
+  transform: rotate(0deg);
+  left: -6px;
+  color: #fff;
+
+
+
+}
+
+
+
+@keyframes close-animate {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+
+.close {
+  //animation: close-animate 1s ease infinite alternate;
+
+}
+
+#cms-data-panel-holder{
+
+
+  .cms-data-panel {
+      position:absolute;
+      top:0;
+
+      color: palette.$Neutral-200;
+
+      overflow-y: scroll;
+      //overflow-x: hidden;
+      pointer-events: all;
+
+      border: 1px solid palette-mixins.$ldNeutral-085;// $ldNeutral-220;
+
+    //  z-index: 10;
+      //padding-right: 125px;
+    z-index: auto;
+
+    > dl > dt > div > hr {
+      visibility: hidden;
+    }
+
+    &.focus{
+      z-index: 100;
+
+
+      dd {
+
+        hr.drag-hilight{
+          position: absolute;
+          bottom: -14px;
+          width:  100%;
+          height: 22px;
+          border:none;
+          border-top-width: initial;
+         // border-bottom: 2px solid indianred;
+          border:none;
+          z-index: 1;
+          opacity: 0;
+          //left:-50px;
+          pointer-events: all;
+
+          &.drag-hilight-property{
+            opacity: 0;
+            &.drag-hilight{
+              border-top:initial;
+              background:  red;
+            }
+          }
+
+          &.drag-hilight-container{
+            bottom: -16px;
+            //opacity: .5;
+            height: 18px;
+            //background: lightgoldenrodyellow;
+            background: skyblue;
+
+
+            &.container-top{
+             //opacity: 0;
+              left: -.125rem;
+             // background: silver;
+              bottom:initial;
+              top:34px;
+              background: royalblue;
+
+
+            }
+          }
+
+          //background: beige;
+         /* &:hover{
+            opacity: 1;
+          }*/
+
+          &.drag-active{
+            border-top: 1px solid orange;
+            //background: red;
+            opacity: 1;
+
+          }
+
+        }
+
+
+
+        [data-value-type="string"] {
+
+          // background: orange;
+          button.edit-string-button{
+            // color: orange;
+            z-index: globals.$z-index-ui;
+            position: absolute;
+            top: 17px;
+            opacity: .2;
+            display: block;
+            pointer-events: all;
+            span{
+              pointer-events: none;
+            }
+            &:hover{
+              opacity: 1;
+            }
+          }
+        }
+
+
+      }
+
+
+    }
+
+    @debug("TEST4");
+
+
+
+    > .dl1
+    :is(.spyne-cms-property-container > dd > dl)
+    :is(.spyne-cms-property-container > dd > dl)
+    :is(.spyne-cms-property-container > dd > dl)
+    :is(.spyne-cms-property-container > dd > dl)
+    {
+      height: 36px;
+      overflow: hidden;
+      background: orange;
+    }
+    $arr: [yellow, orange, olive, fuchsia, indianred, pink, skyblue, antiquewhite, greenyellow];
+    $acc: "";
+    $selNest: "> .spyne-cms-property-container > dd > dl ";
+
+
+    dl[data-nest-expand-override="false"]{
+      height: $collapseHeight;
+      overflow: hidden;
+
+      > dt {
+        .controls-container.cms-data-panel-property-controls .controls-holder .ctrls.controls-left button.toggle {
+          @extend .toggle-btn-closed;
+        }
+      }
+
+    }
+
+    > dl {
+      //background: orange;
+
+
+
+      @for $i from 1 through 20 {
+          $acc: $acc+$selNest;
+          $mainSel: "&[data-nest-expand-level='"+#{$i}+"'] "+$acc;;
+            #{$mainSel} {
+
+
+
+
+
+              &[data-nest-expand-override="true"]{
+
+                height: initial !important;
+                overflow: initial !important;
+                > dt {
+                  .controls-container.cms-data-panel-property-controls .controls-holder .ctrls.controls-left button.toggle {
+                    @extend .toggle-btn-open;
+                  }
+
+                }
+
+
+                dl:not([data-nest-expand-override="true"]){
+
+                  height: $collapseHeight;
+                  overflow: hidden;
+
+                  > dt {
+
+                    .controls-container.cms-data-panel-property-controls .controls-holder .ctrls.controls-left button.toggle {
+                      @extend .toggle-btn-closed;
+                    }
+
+                    //border: 1px solid orange;
+                    //background: #{$col} !important;// list.nth($arr, $i) !important;
+
+                  }
+
+                }
+              }
+
+              &:not([data-nest-override="true"]) {
+
+               // @debug ("looper "+$mainSel);
+                height: $collapseHeight;
+                overflow: hidden;
+
+
+
+
+
+                // background: red !important;
+                > dt {
+
+                  .controls-container.cms-data-panel-property-controls .controls-holder .ctrls.controls-left button.toggle {
+                    @extend .toggle-btn-closed;
+                  }
+
+                }
+              }
+            }
+      }
+    }
+
+
+
+    /*    > dl {
+          > dt{
+            background: orange !important;
+          }
+
+          > .spyne-cms-property-container > dd > dl{
+            > dt{
+              background: olivedrab !important;
+            }
+          }
+        }
+        */
+
+
+
+    /*    &:scope > dl > .spyne-cms-property-container > dd > dl{
+            background: orange !important;
+          }*/
+
+
+
+
+    > dl:nth-of-type(1) {
+        position:relative;
+        //padding: 2rem 100px .5rem 2rem;
+       padding: 0;
+       margin: 1.5rem;
+       width: calc(100% - 5rem);
+
+       > dt{
+        //background: green !important;
+        background: palette-mixins.$ldPrimary-425;
+       }
+    }
+
+    dl{
+
+      position: relative;;
+      margin:0 0 .75rem 0;
+      //border: 1px solid $Neutral-500;
+      //max-width: 800px;
+
+
+
+
+      width: calc(100% - .5rem);
+
+      padding: 0 0 .25rem 0;
+      border-left: 1px solid   palette-mixins.$ldPrimary-200;//  #006400c2;// $ldNeutral-100;
+      border-bottom: 1px solid   palette-mixins.$ldPrimary-200;//  #006400c2;//$ldNeutral-100;
+
+      input.cms-panel-input.type-key{
+        position: relative;
+        background: none;
+        left: 1.125rem;
+        // KEY COLOR
+        color: palette-mixins.$ldNeutral-700-text;
+
+        &:focus{
+          color: palette-mixins.$ldNeutral-900;
+        }
+
+
+        &.container-cms{
+          left: 2.5rem;
+          font-size: 1rem;
+
+
+          inline-size: unset;
+          max-inline-size: unset;
+          margin-inline: unset;
+
+          /* Responsive gutters */
+          padding-inline: unset;
+          padding-block: unset;
+          min-block-size: unset;
+        }
+      }
+
+
+      // OBJECT - ARRAY CONTAINER BACKGROUND
+      dt {
+        font-size: 1.25rem;
+        //padding: .25rem 0;
+       //background: rgba(255,255,255,.2);
+        background: #242d63;// palette-mixins.$ldPrimary-200;// darkgreen;// $ldNeutral-100;
+       // background: darkgreen;
+        padding: .5rem;
+        margin: 0 0 .5rem 0;
+        width: 100%;
+        display:flex;
+
+        //width: calc(100% + 25px);
+
+      }
+
+      .spyne-cms-property-container{
+        position: relative;
+        //left: 1rem;
+       // top: .5rem;
+        dd:last-child{
+
+         // background: darkgoldenrod;
+         /// margin-bottom: 0;
+         // margin-top:0;
+         // padding-top:0;
+         // padding-bottom: 0;
+        }
+      }
+
+      > dd{
+        margin:0;
+      }
+
+
+      dd:last-child{
+       // background: orange;
+        margin-bottom:0;
+      }
+
+      dd{
+          position: relative;
+        display: flex;
+        left: 1rem;
+        min-height: 44px;
+        z-index: auto;
+
+        //padding: .25rem 0;
+        // background: rgba(255,255,255,.053);
+        padding: 0 0.5rem 0 .5rem;
+        justify-content: space-between;;
+
+        &.is-dragging{
+           z-index: globals.$z-index-drag;
+          opacity: .7;
+
+
+
+
+          /* hr.drag-hilight{
+            // border-top:4px solid pink;
+            // visibility: hidden;;s
+             pointer-events: none;
+             opacity: 1;
+             background: red;
+             width: 100%;
+             height: 50px;
+           }*/
+
+          > dl {
+            background: palette-mixins.$ldPrimary-050;
+          }
+
+         > dl > dt > .controls-container.cms-data-panel-property-controls, > label >.controls-container.cms-data-panel-property-controls  {
+            border: 1px solid #666;// $ldSupporting-3-500;
+           z-index: 100;
+          }
+
+          &.drag-active{
+            opacity: .9;
+
+            > dl > dt > .controls-container.cms-data-panel-property-controls, > label >.controls-container.cms-data-panel-property-controls  {
+              border: 1px solid orange;// $ldSupporting-3-500;
+              z-index: 100;
+            }
+          }
+
+          //background: purple;
+
+        }
+
+        // w
+        // width: 100%;
+        // min-width: 500px;
+
+        //margin: 0;
+
+        [data-cms-type="primitive"] {
+         // background: orange;
+          margin-bottom: .5rem;
+
+          button.edit-string-button{
+            display: none;
+          }
+
+        }
+
+        &[data-cms-type="object"], &[data-cms-type="array"] {
+          padding-bottom: 0;
+          padding-top:0;
+          button.edit-string-button{
+            display: none;
+          }
+
+
+
+
+          &.override-disabled{
+            opacity: .7;
+            &::before{
+              position: absolute;;
+              background: rgba(41,39, 39, .5);
+              content: '\00a0';
+              top:0;
+              width: 98%;
+              height: 98%;
+              left: 10px;
+
+              pointer-events: all;
+              z-index: globals.$z-index-app-pages;
+
+            }
+
+
+          }
+
+        }
+
+
+
+
+        label{
+         // position: relative;
+          //margin-left:1rem;
+
+          position: absolute;
+          //margin-left: 1rem;
+
+          // w
+          // width: $barWidth;
+          width: calc(100% - 1.5rem);
+          height: 100%;
+          padding: .5rem;
+          color: palette-mixins.$ldPrimary-900;
+          //background: rgba(255,255,255,.075);
+          background: palette-mixins.$ldNeutral-110;
+
+
+
+          border: 1px solid #393E51;// palette-mixins.$ldNeutral-300;
+
+
+
+            &:after{
+            position: absolute;
+            content: '\00a0';
+            background: darkslateblue;
+            background: palette-mixins.$ldNeutral-320;
+              background: none;
+            width: 350px;
+            padding: 0;
+            top:0;
+            margin: 4px 0;
+            height: calc( 100% - 8px);
+
+          }
+
+
+        }
+
+        input, textarea{
+          //left: calc(50% - 1.5rem);
+          &:focus-visible{
+            ///background: green;
+            border:1px solid orange;
+            outline-width: 0;
+            //color: blue;
+            //outline: 1px solid orange;
+          }
+
+        }
+
+      }
+
+
+    }
+
+
+
+    // INPUT VALUE BACKGROUND
+    input.cms-panel-input.type-property, textarea.cms-panel-input.type-property{
+      color: palette-mixins.$ldNeutral-700-text;
+      pointer-events: all;
+     // max-width: 300px;
+      left: 185px;
+      width: 350px;
+     // width: 100%;
+      padding: .5rem;
+      background: #373c4d;// palette-mixins.$ldNeutral-110;// darkgreen;
+
+      //background: none;
+      //left: 300px;
+      position: relative;
+      //top:0;//.25rem;
+      //min-height: calc(100% - 16px);
+      margin: 1.5rem 0 0 0 0;
+      //top: 8px;
+
+
+    }
+
+
+
+
+    /*
+    dd.cms-panel-property  {
+      &::before{
+        position: absolute;;
+        content: '1';
+        color:orange;
+        left:60%;
+        width: 10px;
+        display: block;;
+        font-size: 10px;
+        z-index: 111111;
+        height: 30px;
+        border-left: 1px solid orange;
+      }
+    }
+
+    dd.cms-panel-property dd.cms-panel-property  {
+      &::before{
+        position: absolute;;
+        content: '2';
+        color:orange;
+        left:60%;
+        width: 10px;
+        display: block;;
+        font-size: 10px;
+        z-index: 111111;
+        height: 30px;
+        border-left: 1px solid orange;
+      }
+
+    }
+
+
+
+    dd.cms-panel-property  dd.cms-panel-property  dd.cms-panel-property  {
+      &::before{
+        position: absolute;;
+        content: '3';
+        color:orange;
+        left:60%;
+        width: 10px;
+        display: block;;
+        font-size: 10px;
+        height: 30px;
+        border-left: 1px solid orange;
+        z-index: 111111;
+      }
+
+    }
+
+
+    dd.cms-panel-property dd.cms-panel-property  dd.cms-panel-property  dd.cms-panel-property  {
+      &::before{
+        position: absolute;;
+        content: '4';
+        color:orange;
+        left:60%;
+        width: 10px;
+        display: block;;
+        font-size: 10px;
+        height: 30px;
+        border-left: 1px solid orange;
+        z-index: 111111;
+      }
+
+    }
+    dd.cms-panel-property dd.cms-panel-property dd.cms-panel-property  dd.cms-panel-property  dd.cms-panel-property  {
+      &.before{
+        position: absolute;;
+        content: ' ';
+        color:orange;
+        left:60%;
+        width: 10px;
+        display: block;;
+        font-size: 10px;
+        height: 30px;
+        border-left: 1px solid orange;
+        z-index: 111111;
+      }
+
+    }
+
+
+
+    dd.cms-panel-property dd.cms-panel-property  dd.cms-panel-property .cms-panel-input.type-property {
+
+    }
+
+    dd.cms-panel-property dd.cms-panel-property dd.cms-panel-property  dd.cms-panel-property .cms-panel-input.type-property {
+
+    }
+
+    dd.cms-panel-property dd.cms-panel-property dd.cms-panel-property dd.cms-panel-property dd.cms-panel-property dd.cms-panel-property .cms-panel-input.type-property {
+
+    }
+    dd.cms-panel-property dd.cms-panel-property dd.cms-panel-property dd.cms-panel-property dd.cms-panel-property dd.cms-panel-property  dd.cms-panel-property .cms-panel-input.type-property {
+
+    }
+
+
+
+
+
+    */
+
+
+
+
+
+
+
+
+  }
+
+
+}
+
+
+/*
+
+.cms-data-panel dl > .spyne-cms-property-container > dd                                  label  {
+  background: yellow !important;
+}
+
+.cms-data-panel dl > .spyne-cms-property-container > dd > dl > .spyne-cms-property-container > dd                                         label  {
+  background: indianred !important;
+}
+
+
+
+.cms-data-panel dl > .spyne-cms-property-container > dd > dl > .spyne-cms-property-container > dd > dl > .spyne-cms-property-container > dd > label {
+  background: darkslateblue !important;
+}
+.cms-data-panel dl > .spyne-cms-property-container > dd > dl > .spyne-cms-property-container > dd > dl > .spyne-cms-property-container > dd > dl > .spyne-cms-property-container > dd label {
+  background: darkgoldenrod !important;
+}
+.cms-data-panel dl > .spyne-cms-property-container > dd > dl > .spyne-cms-property-container > dd > dl > .spyne-cms-property-container > dd > dl > .spyne-cms-property-container > dd  > dl > .spyne-cms-property-container > dd label {
+  background: red !important;
+}
+.cms-data-panel dl > .spyne-cms-property-container > dd > dl > .spyne-cms-property-container > dd > dl > .spyne-cms-property-container > dd > dl > .spyne-cms-property-container > dd  > dl > .spyne-cms-property-container > dd  > dl > .spyne-cms-property-container > dd label {
+  background: pink !important;
+}
+*/
+
+
+
+#cms-data-panel-holder .cms-data-panel {
+
+ #{$nestedPropsSel} {
+
+   > .label {
+     background: yellow !important;
+     width: calc($barWidth - 25px);
+   }
+
+   > .cms-panel-input.type-property, > label:after{
+     left: calc($inputLeftPadding - 25px);
+   }
+
+   #{$nestedPropsSel} {
+
+     >  .label {
+       //background: darkgreen !important;
+       width: calc($barWidth - 50px);
+     }
+     >  .cms-panel-input.type-property, > label:after{
+       left: calc($inputLeftPadding - 50px);
+     }
+     #{$nestedPropsSel} {
+
+
+       > .label {
+        // background: darkslateblue !important;
+         width: calc($barWidth - 75px);
+       }
+       > .cms-panel-input.type-property, > label:after{
+         left: calc($inputLeftPadding - 75px);
+       }
+       #{$nestedPropsSel} {
+
+         > .label {
+           //background: darkgoldenrod !important;
+           width: calc($barWidth - 100px);
+         }
+         > .cms-panel-input.type-property, > label:after{
+           left: calc($inputLeftPadding - 100px);
+         }
+
+         #{$nestedPropsSel} {
+
+           > .label {
+            // background: indianred !important;
+             width: calc($barWidth - 125px);
+           }
+           > .cms-panel-input.type-property, > label:after{
+             left: calc($inputLeftPadding - 125px);
+           }
+           #{$nestedPropsSel} {
+
+             >  .label {
+            //   background: darkblue !important;
+               width: calc($barWidth - 150px);
+             }
+             > .cms-panel-input.type-property, > label:after{
+               left: calc($inputLeftPadding - 150px);
+             }
+
+             #{$nestedPropsSel} {
+
+               >  .label {
+               //  background: black !important;
+               }
+
+               > .cms-panel-input.type-property, > label:after{
+                 left: calc($inputLeftPadding - 175px);
+               }
+
+               #{$nestedPropsSel} {
+
+                 >   .label {
+                   background: azure !important;
+                 }
+
+                 > .cms-panel-input.type-property, > label:after{
+                   left: calc($inputLeftPadding - 200px);
+                 }
+
+
+               }
+
+             }
+
+
+           }
+
+         }
+
+       }
+
+     }
+
+
+   }
+
+ }
+
+
+
+
+}
+
+
+/*
+#{$selector}  {
+
+  label {
+    background: green !important;
+  }
+  #{$selector}{
+
+    label {
+      background: darkslateblue !important;
+    }
+    #{$selector}{
+      label {
+        background: red !important;
+      }
+    }
+  }
+}
+*/

@@ -1,0 +1,24 @@
+<div class="modal-ui modal-ui-top">
+    <div class="modal-ui-top-right">
+
+        <button id="modal-close-btn"
+                data-event-type="modal" data-type="closeModal" data-modal-event="closeModal" class="close-btn">
+            <span class="material-icons">close</span>
+        </button>
+
+    </div>
+</div>
+<div class="modal-content">
+
+    <p class="h2">{{title}}</p>
+    <p>{{desc}}</p>
+
+
+
+</div>
+
+<div class="modal-ui modal-ui-bottom">
+    <button id="modal-cta-btn" class="modal-cta-btn modal-cta-btn-{{btnType}}" data-event-type="modal" data-modal-event="open-window" data-open-window-url="{{btnURL}}" >{{btnType}}</button>
+
+
+</div>

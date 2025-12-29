@@ -1,0 +1,21 @@
+<ul class="property options">
+   {{#propsArr}}
+
+    <li>
+        <button class="cms-data-panel-btn {{type}} type-{{propertyType}}"
+                data-duplicate-active-element-bool="true"
+                data-append-type="appendView" data-type="{{type}}"
+                data-event-type="{{type}}"
+                data-value-type="{{propertyType}}"
+                data-parent-id="{{parentDataId}}"
+                data-root-proxy-id="{{rootProxyId}}"
+                data-is-container="{{isContainer}}"
+                data-active-element-id="{{activeElementId}}"
+                data-cms-key="{{dataCmsKey}}"
+                data-cms-id="{{dataCmsId}}">
+        <span class="material-symbols-outlined ">{{icon}}</span> {{title}}
+        </button>
+    </li>
+
+    {{/propsArr}}
+</ul>

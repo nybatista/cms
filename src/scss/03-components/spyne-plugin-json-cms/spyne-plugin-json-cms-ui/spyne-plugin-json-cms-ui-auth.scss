@@ -1,0 +1,163 @@
+@use "../../../02-variables/palette" as vars;
+@use "../../../02-variables/globals" as globals;
+
+main.hide-login {
+  #stage-view {
+
+    #app-header{
+
+
+      .app-header-content{
+
+        .auth-container {
+
+          display: none;
+        }
+
+      }
+
+    }
+  }
+}
+
+#spyne-plugin-json-cms #cms-ui #cms-ui-controls .content-section {
+
+  //display: none;
+  #auth-view {
+
+    &:has(.active) {
+
+      z-index: globals.$z-index-ui;
+
+
+    }
+
+    margin: 0 0 0 1rem;
+    top: -.5rem;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    padding: 0;
+    width: 60px;
+
+    &.authenticated {
+      width: 38px;
+    }
+
+
+    #auth-login-btn {
+      position: relative;
+      top: 4px;
+    }
+
+    button {
+      background-color: #22252b;
+      color: vars.$Primary-200;
+      height: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      // Basic resets
+      margin: 0;
+      padding: 2px 8px; // optional horizontal padding
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 14px; // optional
+      border: none;
+      background: none;
+
+      &.blue-border {
+        border: 1px solid vars.$Neutral-800;
+        background: vars.$Supporting-1-900;
+        border-radius: 4px;
+        padding: 1.125rem;
+        left: 1.125rem;
+        top: -.25rem;
+        position: relative;
+
+
+      }
+
+      &:hover {
+        // Slightly lighten or darken the background on hover
+        // background-color: lighten(#22252b, 5%);
+      }
+    }
+
+    .auth-user-profile {
+      .user-icon {
+        visibility: visible;
+        top: 3px;
+        width: max-content;
+
+        position: absolute;
+        right: 0;
+
+        img {
+          width: 33px;
+          border-radius: 50%;
+        }
+      }
+
+      .user-content {
+        position: absolute;
+        top: 63px;
+        right: 16px;
+        background: vars.$Neutral-050;
+        padding: 2rem;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        //box-shadow: -2px 2px 13px vars.$Neutral-600;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        .user-content-items {
+          display: flex;
+          flex-direction: column;
+          color: vars.$Neutral-700;
+          align-items: center;
+          width: 100%;
+
+          p {
+            color: vars.$Neutral-800;
+          }
+
+          .user-content-thumb {
+            max-width: 150px;
+          }
+
+          p.user-content-name {
+            margin: 1rem 0;
+            color: vars.$Neutral-800;
+          }
+        }
+
+        visibility: hidden;
+        pointer-events: none;
+        height: 0;
+        width: 0;
+      }
+
+      &.active {
+        .user-icon {
+          // visibility: hidden;
+        }
+
+        .user-content {
+          visibility: visible;
+          pointer-events: all;
+          height: auto;
+          min-width: max-content;
+          width: 24vw;
+          max-width: 250px;
+        }
+      }
+    }
+  }
+}
