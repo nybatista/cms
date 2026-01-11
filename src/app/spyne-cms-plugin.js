@@ -155,6 +155,7 @@ class SpyneCmsPlugin extends SpynePlugin {
       "CHANNEL_PLUGIN_CMS_CONFIG",
       "CHANNEL_SPYNE_JSON_CMS_DATA",
       "CHANNEL_SPYNE_JSON_CMS_DATA_UI",
+      "CHANNEL_AUTH_LOCAL",
       "CHANNEL_CMS_ITEMS",
     ];
 
