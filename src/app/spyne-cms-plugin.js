@@ -157,6 +157,9 @@ class SpyneCmsPlugin extends SpynePlugin {
       "CHANNEL_SPYNE_JSON_CMS_DATA_UI",
       "CHANNEL_AUTH_LOCAL",
       "CHANNEL_CMS_ITEMS",
+      "CHANNEL_MODAL",
+      "CHANNEL_TINYMCE",
+      "CHANNEL_FETCH_REGISTRY_INFO"
     ];
 
     SpyneAppProperties.excludeChannelsFromConsole =
