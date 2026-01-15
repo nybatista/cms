@@ -57,7 +57,7 @@ export class AuthLocalTraits extends SpyneTrait {
 
   static authLocal$AddEdetMethod(payload={}){
     const { user } = payload;
-    const { isAuthenticated, role, edet } = user;
+    const { isAuthenticated, role, edet } = user || {};
    //console.log("IS AUTH ON EDET METHOD ",{isAuthenticated, role, edet});
 
     if (isAuthenticated && edet !==undefined){
