@@ -103,7 +103,7 @@ export class MainPluginContentHolderView extends ViewStream {
 /*
     const headerEl = new DomElement({
       tagName: 'header',
-      template: `<h5>SPYNE CMS</h5><span class="material-icons">
+      template: `<h5>SPYNE CMS</h5><span class="material-symbols-outlined">
 settings_backup_restore
 </span>`
     });
