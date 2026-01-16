@@ -90,7 +90,17 @@ export class ChannelAuthLocal extends Channel {
     SpyneAppProperties.setProp('isAuthenticated', isAuthenticated);
     SpyneAppProperties.setProp('isPremium', isPremium);
 
-    SpyneAppProperties.setProp('allowPremiumAccess', allowPremiumAccess);
+    /**
+     *
+     * TODO: ENABLE PREMIUM ACCESS FOR ALL USERS
+     *
+     * */
+
+     SpyneAppProperties.setProp('allowPremiumAccess', true);
+
+      // ================== DEFAULT CHECK DISABLED TO ALLOW FREE USERS PREMIUM ACCESS ==================
+    //    SpyneAppProperties.setProp('allowPremiumAccess', allowPremiumAccess);
+    // ===============================================================================================
 
    //console.log('local auth registered on info',e);
 

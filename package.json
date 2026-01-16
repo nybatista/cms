@@ -28,7 +28,7 @@
     "tw-elements": "^2.0.0"
   },
   "devDependencies": {
-    "@spynejs/cms-adapter": "^0.1.0",
+    "@spynejs/cms-adapter": "^0.1.1",
     "chai": "^6.2.0",
     "chai-dom": "^1.12.1",
     "clean-webpack-plugin": "^4.0.0",
@@ -50,7 +50,6 @@
     "karma-webpack": "^5.0.1",
     "madge": "^8.0.0",
     "mini-css-extract-plugin": "^2.9.4",
-    "mocha": "^11.7.2",
     "sass": "^1.93.2",
     "sass-loader": "^16.0.5",
     "spyne-plugin-console": "^0.5.3",

@@ -191,7 +191,10 @@ export default (env = {}, argv = {}) => {
   // -------------------------------------------------------------------
   return {
     mode,
-    stats: isProduction ? "none" : { loggingDebug: ["sass-loader"] },
+    stats: isProduction ? "none" : {
+      loggingDebug: ['sass-loader'],
+      warningsFilter: [/sass-loader/, /Deprecation Warning/],
+    },
     entry: entryFile,
     externals,
     output: {
