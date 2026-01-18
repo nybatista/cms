@@ -28,7 +28,7 @@
     "tw-elements": "^2.0.0"
   },
   "devDependencies": {
-    "@spynejs/cms-adapter": "^0.1.1",
+    "@spynejs/cms-adapter": "^0.1.2",
     "chai": "^6.2.0",
     "chai-dom": "^1.12.1",
     "clean-webpack-plugin": "^4.0.0",
