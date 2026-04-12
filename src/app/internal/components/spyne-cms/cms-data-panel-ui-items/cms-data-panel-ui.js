@@ -1,6 +1,8 @@
 import {ViewStream, DomElement, SpyneAppProperties} from 'spyne';
 import {CmsDataPanelPublishBtn} from './cms-data-panel-publish-btn';
+import {CmsDataPanelCodeMapBtn} from './cms-data-panel-codmap-btn';
 const archiveBtnTmpl = require('./templates/cms-data-panel-backups-btn.tmpl.html');
+import codeMapBtnTmpl from '../templates/cms-data-panel-code-map-btn.tmpl.html'
 import { TinymceHolder } from "../tinymce/tinymce-holder";
 import {
   CMS_UI_ControlsResyncBtn
@@ -73,14 +75,24 @@ export class CmsDataPanelUI extends ViewStream {
     onRendered() {
       this.appendView(new CmsDataPanelPublishBtn(), '.ui-holder-bottom');
 
+
+
       const archiveBtn = new DomElement({
         template:archiveBtnTmpl
 
       })
 
+      const codeMapBtn = new DomElement({
+        template:codeMapBtnTmpl
+
+      })
+
+
+
 
 
       this.props.el$('.ui-holder-bottom').el.appendChild(archiveBtn.render());
+      this.props.el$('.ui-holder-bottom').el.appendChild(codeMapBtn.render());
 
      // window.setTimeout(this.updateArchiveBtnPort.bind(this), 1000);
 
