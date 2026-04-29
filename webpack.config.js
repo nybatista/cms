@@ -3,7 +3,6 @@ import { fileURLToPath } from "url";
 import webpack from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import CopyWebpackPlugin from "copy-webpack-plugin";
 import { CmsAdapterWebpack } from "@spynejs/cms-adapter";
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@spynejs/cms",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "CMS runtime plugin for structured JSON authoring inside SpyneJS applications",
   "main": "lib/spyne-cms-plugin.min.js",
   "module": "lib/spyne-cms-plugin.min.js",
@@ -16,6 +16,9 @@
     "eslint-fix-tests": "eslint --fix 'src/tests/**'",
     "test": "echo \"No public test suite defined\" && exit 0"
   },
+  "peerDependencies": {
+    "spyne": ">=0.21.0 <1.0.0"
+  },
   "dependencies": {
     "dompurify": "^3.3.0",
     "fflate": "^0.8.2",
@@ -23,7 +26,6 @@
     "prettier": "^3.6.2",
     "ramda": "^0.31.3",
     "rxjs": "^7.8.2",
-    "spyne": "^0.21.4",
     "tinymce": "^7.9.1",
     "tw-elements": "^2.0.0"
   },
@@ -32,7 +34,6 @@
     "chai": "^6.2.0",
     "chai-dom": "^1.12.1",
     "clean-webpack-plugin": "^4.0.0",
-    "copy-webpack-plugin": "^13.0.1",
     "css-loader": "^7.1.2",
     "eslint": "^8.50.0",
     "eslint-config-semistandard": "^17.0.0",
@@ -52,7 +53,8 @@
     "mini-css-extract-plugin": "^2.9.4",
     "sass": "^1.93.2",
     "sass-loader": "^16.0.5",
-    "spyne-plugin-console": "^0.5.3",
+    "spyne": "^0.22.3",
+    "spyne-plugin-console": "^0.5.5",
     "style-loader": "^4.0.0",
     "tailwindcss": "^3.4.14",
     "webpack": "^5.101.3",
