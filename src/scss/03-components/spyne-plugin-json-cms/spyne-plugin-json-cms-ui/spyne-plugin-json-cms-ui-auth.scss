@@ -32,7 +32,8 @@ main.hide-login {
 
     }
 
-    margin: 0 0 0 1rem;
+   //margin: 0 0 0 1rem;
+    margin:0;
     top: -.5rem;
 
     position: relative;
@@ -54,6 +55,47 @@ main.hide-login {
     }
 
     button {
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+      color: vars.$Primary-200;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      &.login-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 6px;
+        background: vars.$Supporting-1-900;
+        border: 1px solid vars.$Neutral-800;
+        transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+
+        &:hover {
+          background: lighten(vars.$Supporting-1-900, 6%);
+          border-color: lighten(vars.$Neutral-800, 8%);
+          color: #fff;
+        }
+
+        &:active {
+          transform: scale(0.97);
+        }
+
+        &:focus-visible {
+          outline: none;
+          box-shadow: 0 0 0 2px vars.$Neutral-900, 0 0 0 4px vars.$Primary-400;
+        }
+      }
+    }
+
+    buttonOld {
       background-color: #22252b;
       color: vars.$Primary-200;
       height: 30px;
