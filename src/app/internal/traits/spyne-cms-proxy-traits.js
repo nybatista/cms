@@ -166,34 +166,40 @@ export class SpyneCmsProxyTraits extends SpyneTrait {
 
   static spyneCms$SanitizeObj(input) {
     const sanitizeStr = (s) =>
-      DOMPurify.sanitize(s, {
-        FORBID_TAGS: ['script',  'object', 'embed', 'form', 'meta'],
-        // ADD TAGS FOR CMS
-        ADD_TAGS: ['iframe', 'input', 'button', 'link',],
-        // Remove any inline JS attributes
-        FORBID_ATTR: ['onerror', 'onload', 'onclick', 'onmouseover', 'onfocus', 'onblur'],
-        ALLOW_DATA_ATTR: false
-      });
+        DOMPurify.sanitize(s, {
+          FORBID_TAGS: ['script', 'object', 'embed', 'form', 'meta'],
+          // ADD TAGS FOR CMS
+          ADD_TAGS: ['iframe', 'input', 'button', 'link'],
+          // Allow safe anchor behavior attrs
+          ADD_ATTR: ['target', 'rel'],
+          // Remove any inline JS attributes
+          FORBID_ATTR: ['onerror', 'onload', 'onclick', 'onmouseover', 'onfocus', 'onblur'],
+          ALLOW_DATA_ATTR: false
+        });
 
-    if (Array.isArray(input)) {
-      for (let i = 0; i < input.length; i++) {
-        if (typeof input[i] === 'string') {
-          input[i] = sanitizeStr(input[i]);
+    const sanitizeValue = (value) => {
+      if (typeof value === 'string') {
+        return sanitizeStr(value);
+      }
+
+      if (Array.isArray(value)) {
+        for (let i = 0; i < value.length; i++) {
+          value[i] = sanitizeValue(value[i]);
+        }
+        return value;
+      }
+
+      if (value && typeof value === 'object') {
+        for (const k in value) {
+          if (!Object.prototype.hasOwnProperty.call(value, k)) continue;
+          value[k] = sanitizeValue(value[k]);
         }
       }
-      return input;
-    }
 
-    if (input && typeof input === 'object') {
-      for (const k in input) {
-        if (!Object.prototype.hasOwnProperty.call(input, k)) continue;
-        if (typeof input[k] === 'string') {
-          input[k] = sanitizeStr(input[k]);
-        }
-      }
-    }
+      return value;
+    };
 
-    return input;
+    return sanitizeValue(input);
   }
 
 
