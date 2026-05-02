@@ -56,6 +56,12 @@ export class ChannelAuthLocal extends Channel {
     if (regEvt?.payload?.user?.isAuthenticated === true && SpyneAppProperties.enableCMSProxies ===false){
       const action = "CHANNEL_AUTH_LOCAL_SYNC_EVENT";
       this.sendChannelPayload(action, routeData);
+    } else if (regEvt?.payload?.user?.isAuthenticated === false) {
+
+      // TEMPORARY PREMIUM
+      this.props.isPremium = true;
+      this.props.isAuthenticated = false;
+      this.authLocal$OnModalRequest();
     }
 
 
