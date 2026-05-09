@@ -1,6 +1,6 @@
 import {ViewStream, DomElementTemplate} from 'spyne';
 import {BlogView} from './blog-view';
-
+import {IntegrationTestRunner} from './integration-test-runner.js';
 export class PageView extends ViewStream {
 
     constructor(props={}) {
@@ -62,6 +62,11 @@ export class PageView extends ViewStream {
 
       this.checkToAddBlogItems();
       this.addNestedData();
+      if (this.props.data.integrationTests !==undefined) {
+        const fixture = this.props.data.integrationTests;
+        this.appendView(new IntegrationTestRunner({fixture}), '.integration-test-runner-holder');
+        console.log('integration tests are ',this.props.data.integrationTests);;
+      }
     }
 
 }
